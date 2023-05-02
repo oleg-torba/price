@@ -35,7 +35,7 @@ export function App() {
     <>
       <Section title= <p className='title'>
             The application was created as a test task for finding prices for repairs. Thanks to <a href="https://gsm-forsage.com.ua">GSM-FROSAGE</a> and <a href="https://tplus.market">TEXNO+</a> ​​for the provided API. 
-            Junior front end developer: Oleg Torba. 
+            The application was developed by a junior front end developer: Oleg Torba. 
           </p>>
         <form className="form" onSubmit={handleSubmit}>
           <input
