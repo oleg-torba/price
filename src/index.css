@@ -7,9 +7,125 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: blanchedalmond;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+p,
+h2,
+ul {
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid lightcoral;
+  border-radius: 3px;
+  width: 450px;
+  background-color: bisque;
+  margin: 0 auto;
+}
+p {
+  font-weight: 600;
+}
+.formInput {
+  outline: none;
+  width: 100%;
+  margin: 0 auto;
+  height: 30px;
+  border: 1.5px solid lightcoral;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+button {
+  width: 20px;
+  background-color: blue;
+  border: none;
+  border-radius: 3px;
+  height: 30px;
+  margin: 0 auto;
+  color: aliceblue;
+}
+
+.contactsList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  padding: 20px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  height: 250px;
+  width: 270px;
+  border: 1.5px solid lightcoral;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: aqua;
+}
+.contactValue {
+  display: inline-block;
+  color: darkorange;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+img{
+  display: block;
+}
+.contactBlock {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.contactBtn {
+  margin-top: 10px;
+}
+
+li {
+  list-style-type: none;
+  margin-right: 10px;
+}
+.find {
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.section {
+  padding: 20px 40px;
+}
+
+.title {
+  text-align: center;
+}
+
+button{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100px;
+}
+
+span{
+  font-weight: 500;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
