@@ -1,10 +1,7 @@
-import  { useState, useEffect } from 'react';
-import { Form } from './Form/form';
+import  { useState} from 'react';
+
 import { Section } from './Section/section';
-// import { nanoid } from 'nanoid';
-// import { Contact } from './ContactList/contactList';
-// import { Filter } from './Filter/filterContacts';
-// import { Notification } from './Notification/notification';
+
 import Data from "./apiData.json"
 
 
@@ -75,6 +72,7 @@ export function App () {
                 priceLCD = Math.ceil(((item.price + 30) * 38.5) / 100) * 100;
 
               }
+             
 
               if (item.name.includes("Дисплей" || "complete")) {
                 return (
