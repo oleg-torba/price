@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
+import { Feedback } from './Feedback/Feedback';
 import { Section } from './Section/section';
 
 import Data from './apiData.json';
@@ -30,6 +31,7 @@ export function App() {
       )
     );
   };
+  console.log(gsm.name)
 
   return (
     <>
@@ -60,7 +62,9 @@ export function App() {
 
         
       )}
-
+<Section title=<p>Форма зворотнього зв'язку</p> >
+        <Feedback/>
+      </Section>
       <Section title=<p>Доступні сервісні центри</p> >
         <ServiceList/>
       </Section>
