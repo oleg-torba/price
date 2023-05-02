@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ItemList } from './ContactList/contactList';
+import { ServiceList } from './Servicelist/ServiceList';
 import { Section } from './Section/section';
 
 import Data from './apiData.json';
@@ -59,7 +60,13 @@ export function App() {
         >
           <ItemList gsm={gsm} />
         </Section>
+
+        
       )}
+
+      <Section title=<p>Доступні сервісні центри</p> >
+        <ServiceList/>
+      </Section>
     </>
   );
 }
