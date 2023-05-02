@@ -72,7 +72,7 @@ export function App () {
                 priceLCD = Math.ceil(((item.price + 30) * 38.5) / 100) * 100;
 
               }
-             
+            
 
               if (item.name.includes("Дисплей" || "complete")) {
                 return (
