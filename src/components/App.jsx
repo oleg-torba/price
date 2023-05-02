@@ -63,6 +63,7 @@ export function App () {
 
 
               let priceLCD = Math.ceil(((item.price + 20) * 38.5) / 100) * 100;
+              const changeGlass = priceLCD/2
 
               let priceCharge = Math.ceil(((item.price + 10) * 38.5) / 100) * 100;
               if (item.price >= 25) {
@@ -74,7 +75,7 @@ export function App () {
               }
             
 
-              if (item.name.includes("Дисплей" || "complete")) {
+              if (item.name.includes("Дисплей") || item.name.includes('Complete')) {
                 return (
 
                   <>
@@ -88,6 +89,9 @@ export function App () {
                         </span>
                         <span>
                           <span className="contactValue">Ціна:</span>{priceLCD} грн
+                        </span>
+                        <span>
+                          <span className="contactValue">Заміна скла дисплею:</span>{changeGlass} грн
                         </span>
                         <span>
                           <span className="contactValue">Наявність:</span>{item.quantity_in_stock} шт

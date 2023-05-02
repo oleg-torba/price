@@ -71,8 +71,8 @@ button {
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
-  height: 250px;
-  width: 270px;
+  height: 280px;
+  width: 280px;
   border: 1.5px solid lightcoral;
   border-radius: 4px;
   margin-bottom: 10px;
