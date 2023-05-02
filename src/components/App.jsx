@@ -33,7 +33,7 @@ export function App() {
 
   return (
     <>
-      <Section 
+      <Section >
         <form className="form" onSubmit={handleSubmit}>
           <input
             className="formInput"
