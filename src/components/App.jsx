@@ -21,7 +21,10 @@ export function App () {
 
   const handleSubmit = e => {
     e.preventDefault();
-
+if(inputValue === ''){
+  alert('Заповність поле пошуку')
+  return
+}
 
    setGsm(data.filter(contact =>
       contact.name.toLowerCase().includes(inputValue.toLowerCase())
@@ -37,10 +40,10 @@ export function App () {
 
     
         <>
-        <Section title = "Welcome"/>
+        <Section/>
         <form className="form" onSubmit={handleSubmit}>
 
-        <label>
+   
 
           <input
             className="formInput"
@@ -49,13 +52,14 @@ export function App () {
             value={inputValue}
 
             onChange={handleChange} />
-        </label>
+       
         <button className="formBtn" type="submit">
          Search
         </button>
       </form>
-     {gsm.length>0 &&  <Section title="Результат"/>}
+     {gsm.length>0 &&  <Section title={gsm.length > 0 && <p>За запитом "{inputValue}" ми знайшли {gsm.length} позицій</p>}/>}
       <div className="contactBlock">
+        
           <ul className="contactsList">
             {gsm.map((item) => {
 
