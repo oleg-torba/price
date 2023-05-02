@@ -15,6 +15,7 @@ export function App () {
   const handleChange = e => {
     const inputValue = e.target.value;
     setInputValue(inputValue);
+    console.log(inputValue)
   
   };
 
@@ -23,7 +24,7 @@ export function App () {
 
 
    setGsm(data.filter(contact =>
-      contact.name.includes(inputValue)
+      contact.name.toLowerCase().includes(inputValue.toLowerCase())
     ))
     
     
@@ -97,7 +98,7 @@ export function App () {
                   </>
                 );
               }
-              if (item.name.includes('Роз\'єм зарядки')) {
+              if (item.name.includes('Роз\'єм заряд' || 'Charge')) {
                 return (
                   <>
                     <li className="contactsItem" key={item.name}>
