@@ -71,6 +71,9 @@ button {
 
 .contactsList {
   display: flex;
+
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   padding: 0;
   padding: 20px;
@@ -122,10 +125,18 @@ li {
 .section {
   padding: 20px 40px;
   color: white;
+
 }
 
 .title {
+  display: inline-block;
   text-align: center;
+  color: khaki;
+  margin-bottom: 20px;
+}
+
+a{
+  color: deepskyblue;
 }
 
 /* button{
@@ -139,4 +150,5 @@ span{
   font-weight: 500;
   margin-right: 5px;
   margin-bottom: 5px;
+  color: black;
 }
