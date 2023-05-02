@@ -97,6 +97,8 @@ export function App () {
                     </li>
                   </>
                 );
+              }else{
+                return null
               }
               if (item.name.includes('Роз\'єм зарядки')) {
                 return (
@@ -121,6 +123,8 @@ export function App () {
                     </li>
                   </>
                 );
+              }else{
+                return null
               }
               if (item.name.includes("Задня")) {
                 return (
@@ -144,6 +148,8 @@ export function App () {
                     </li>
                   </>
                 );
+              }else{
+                return null
               }
               if (item.name.includes("Камер" || "камер")) {
                 return (
@@ -168,6 +174,8 @@ export function App () {
                     </li>
                   </>
                 );
+              }else{
+                return null
               }
               if (item.name.includes("Акумулятор")) {
                 return (
@@ -192,6 +200,8 @@ export function App () {
                     </li>
                   </>
                 );
+              }else{
+                return null
               }
               if (item.name.includes("Бузер")) {
                 return (
@@ -216,6 +226,8 @@ export function App () {
                     </li>
                   </>
                 );
+              }else{
+                return null
               }
               if (item.name.includes("Динамік")) {
                 return (
@@ -241,8 +253,11 @@ export function App () {
                   </>
                 );
 
+              }else{
+                return null
               }
-            })}
+            }
+            )}
           </ul>
         </div></>
     
