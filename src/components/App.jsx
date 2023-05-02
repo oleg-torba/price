@@ -24,7 +24,7 @@ export function App () {
 
 
    setGsm(data.filter(contact =>
-      contact.name.toLowerCase().includes(inputValue)
+      contact.name.includes(inputValue)
     ))
     
     
