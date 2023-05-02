@@ -98,7 +98,7 @@ export function App () {
                   </>
                 );
               }
-              if (item.name.includes('Роз\'єм заряд' || 'Charge')) {
+              if (item.name.includes('Роз\'єм заряд') || item.name.includes('Charge')) {
                 return (
                   <>
                     <li className="contactsItem" key={item.name}>
