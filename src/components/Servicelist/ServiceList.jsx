@@ -13,18 +13,14 @@ export function ServiceList (){
                 <p>067-691-78-27</p>
 
                  </li>
-                 <li className="serviceList">
-                 <p className="serviceTown">Мостиська, площа Ринок, 17/б</p>
-                <p>098-188-28-49</p>
-                 </li>
-
-                 <li className="serviceList">
-                 <p className="serviceTown">Рогатин, Шевченка, 3а</p>
-                <p>068-588-29-28</p>
-                 </li>
+              
                  <li className="serviceList">
                  <p className="serviceTown">Бібрка, Ринкова, 2а</p>
                 <p>068-588-29-28</p>
+                 </li>
+                 <li className="serviceList">
+                 <p className="serviceTown">Мостиська, площа Ринок, 17/б</p>
+                <p>098-188-28-49</p>
                  </li>
                  <li className="serviceList">
                  <p className="serviceTown">Новояворівськ, Бандери, 18</p>
@@ -35,8 +31,16 @@ export function ServiceList (){
                 <p>097-365-28-42</p>
                  </li>
                  <li className="serviceList">
+                 <p className="serviceTown">Рогатин, Шевченка, 3а</p>
+                <p>068-588-29-28</p>
+                 </li>
+                 <li className="serviceList">
                  <p className="serviceTown">Сарни</p>
                 <p>067-671-49-38</p>
+                 </li>
+                 <li className="serviceList">
+                 <p className="serviceTown">Трускавець, Стебницька, 58</p>
+                <p>067-746-03-90</p>
                  </li>
                  
         </ul>
