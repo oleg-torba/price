@@ -14,15 +14,16 @@ export function ItemList ({gsm}) {
 
 
 
-              let priceLCD = Math.ceil(((item.price + 20) * 38.5) / 100) * 100;
+              let priceLCD = Math.ceil(((item.price + 20) * 37.8) / 100) * 100;
               const changeGlass = priceLCD/2
 
-              let priceCharge = Math.ceil(((item.price + 10) * 38.5) / 100) * 100;
+              let priceCharge = Math.ceil(((item.price + 10) * 37.8) / 100) * 100;
+              let glassCam = Math.ceil(((item.price + 8) * 37.8) / 100) * 100;
               if (item.price >= 25) {
-                priceLCD = Math.ceil(((item.price + 25) * 38.5) / 100) * 100;
+                priceLCD = Math.ceil(((item.price + 25) * 37.8) / 100) * 100;
               }
               if (item.price >= 60) {
-                priceLCD = Math.ceil(((item.price + 30) * 38.5) / 100) * 100;
+                priceLCD = Math.ceil(((item.price + 30) * 37.8) / 100) * 100;
 
               }
             
@@ -222,7 +223,35 @@ export function ItemList ({gsm}) {
                   </>
                 );
 
-              }else{
+              } 
+              if(item.name.includes('Скло камери')){
+                return (
+                  <>
+                  <li className="contactsItem" key={item.name}>
+                  <div className="contact">
+                  <span>
+                      <img src={item.image} alt="" width="100" height="100" />
+                    </span>
+                    <span>
+                      <span className="contactValue">Заміна скла камери:</span>
+                      <span className="contactItem">{item.name}</span> 
+                    </span>
+                    <span>
+                      <span className="contactValue">Ціна:</span>
+                      <span className="contactItem"> {glassCam} грн</span> 
+                     
+                    </span>
+                    <span>
+                      <span className="contactValue">Наявність:</span>
+                      <span className="contactItem"> {priceCharge} грн</span> 
+                    </span>
+
+                  </div>
+                </li>
+              </>
+                )
+              }
+              else{
                 return null
               }
             }
