@@ -179,26 +179,7 @@ span{
   margin-bottom: 10px;
 }
 
-.feedback{
- width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
 
-}
-
-.feedback__input{
-  width: 48%;
-  height: 25px;
-  border: 1px solid #02be6e;
-  border-radius: 10px;
-  outline: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 0 10px;
-  font-weight: 500;
-}
 
 textarea{
   height: 100px;
@@ -211,4 +192,24 @@ textarea{
 
 .itemValue{
   color: white;
+}
+
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categoryBtn{
+  width: 150px;
+  margin-right: 50px;
+
+}
+
+.categoryBtn:last-child {
+  margin-right: 0;
+}
+.category__container{
+  border: 1px solid black;
+  padding: 20px 20px;
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
-
+import { CategoryItem } from './CategoryTitle/CategoryTitle';
 import { Section } from './Section/section';
 
 import Data from './apiData.json';
@@ -51,7 +51,10 @@ export function App() {
           </button>
         </form>
       </Section>
-
+    
+    <Section>
+   < CategoryItem/>
+    </Section>
       {gsm.length > 0 && (
         <Section
           title=<p>

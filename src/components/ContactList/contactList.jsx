@@ -35,6 +35,9 @@ export function ItemList ({gsm}) {
                 <>
                   <li className="contactsItem" key={item.name}>
                     <div className="contact">
+                    <span
+                    className="contactValue">Постачальник 1 
+                      </span>
                       <span>
                         <img src={item.image} alt="" width="100" height="100" />
                       </span>
@@ -67,6 +70,9 @@ export function ItemList ({gsm}) {
                 <>
                   <li className="contactsItem" key={item.name}>
                     <div className="contact">
+                    <span
+                    className="contactValue">Постачальник 1 
+                      </span>
                       <span>
                         <img src={item.image} alt="" width="100" height="100" />
                       </span>
@@ -94,6 +100,9 @@ export function ItemList ({gsm}) {
                 <>
                   <li className="contactsItem" key={item.name}>
                     <div className="contact">
+                    <span
+                    className="contactValue">Постачальник 1 
+                      </span>
                       <span>
                         <img src={item.image} alt="" width="100" height="100" />
                       </span>
@@ -121,6 +130,9 @@ export function ItemList ({gsm}) {
                 <>
                   <li className="contactsItem" key={item.name}>
                     <div className="contact">
+                    <span
+                    className="contactValue">Постачальник 1 
+                      </span>
                       <span>
                         <img src={item.image} alt="" width="100" height="100" />
                       </span>
@@ -149,6 +161,9 @@ export function ItemList ({gsm}) {
                 <>
                   <li className="contactsItem" key={item.name}>
                     <div className="contact">
+                    <span
+                    className="contactValue">Постачальник 1 
+                      </span>
                       <span>
                         <img src={item.image} alt="" width="100" height="100" />
                       </span>
@@ -176,6 +191,9 @@ export function ItemList ({gsm}) {
                 <>
                   <li className="contactsItem" key={item.name}>
                     <div className="contact">
+                    <span
+                    className="contactValue">Постачальник 1 
+                      </span>
                       <span>
                         <img src={item.image} alt="" width="100" height="100" />
                       </span>
@@ -203,6 +221,9 @@ export function ItemList ({gsm}) {
                 <>
                   <li className="contactsItem" key={item.name}>
                     <div className="contact">
+                    <span
+                    className="contactValue">Постачальник 1 
+                      </span>
                       <span>
                         <img src={item.image} alt="" width="100" height="100" />
                       </span>
@@ -231,6 +252,9 @@ export function ItemList ({gsm}) {
                 <>
                   <li className="contactsItem" key={item.name}>
                     <div className="contact">
+                    <span
+                    className="contactValue">Постачальник 1 
+                      </span>
                       <span>
                         <img src={item.image} alt="" width="100" height="100" />
                       </span>
