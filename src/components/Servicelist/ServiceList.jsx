@@ -16,7 +16,7 @@ export function ServiceList (){
               
                  <li className="serviceList">
                  <p className="serviceTown">Бібрка, Ринкова, 2а</p>
-                <p>068-588-29-28</p>
+                <p>067-862-99-19</p>
                  </li>
                  <li className="serviceList">
                  <p className="serviceTown">Мостиська, площа Ринок, 17/б</p>
@@ -24,11 +24,11 @@ export function ServiceList (){
                  </li>
                  <li className="serviceList">
                  <p className="serviceTown">Новояворівськ, Бандери, 18</p>
-                <p>067-862-99-19</p>
+                <p>097-365-28-42</p>
                  </li>
                  <li className="serviceList">
                  <p className="serviceTown">Недригайлів, Незалежності, 8</p>
-                <p>097-365-28-42</p>
+                <p>098-904-49-44</p>
                  </li>
                  <li className="serviceList">
                  <p className="serviceTown">Рогатин, Шевченка, 3а</p>
