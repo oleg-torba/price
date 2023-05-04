@@ -77,11 +77,11 @@ button {
   /* align-items: center; */
   height: 280px;
   width: 280px;
-  border: 1.5px solid lightcoral;
+  border: 1.5px solid white;
   border-radius: 4px;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .contactValue {
   display: inline-block;
@@ -192,4 +192,8 @@ textarea{
   border: 1px solid #02be6e;
   border-radius: 10px;
   outline: none;
+}
+
+.itemValue{
+  color: white;
 }

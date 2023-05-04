@@ -37,16 +37,21 @@ export function ItemList ({gsm}) {
                           <img src={item.image} alt="" width="100" height="100" />
                         </span>
                         <span>
-                          <span className="contactValue">Заміна дисплейного модулю:</span> {item.name}
+                          <span className="contactValue">Заміна дисплейного модулю:</span>
+                          <span className='itemValue'>{item.name}</span> 
                         </span>
                         <span>
-                          <span className="contactValue">Ціна:</span>{priceLCD} грн
+                          <span className="contactValue">Ціна:</span>
+                          <span className='itemValue'>{priceLCD} грн</span> 
                         </span>
                         <span>
-                          <span className="contactValue">Заміна скла дисплею:</span>{changeGlass} грн
+                          <span className="contactValue">Заміна скла дисплею:</span>
+                          <span className='itemValue'> {changeGlass} грн</span> 
+                         
                         </span>
                         <span>
-                          <span className="contactValue">Наявність:</span>{item.quantity_in_stock} шт
+                          <span className="contactValue">Наявність:</span>
+                          <span className='itemValue'>{item.quantity_in_stock} шт</span> 
                         </span>
 
                       </div>
@@ -63,14 +68,17 @@ export function ItemList ({gsm}) {
                           <img src={item.image} alt="" width="100" height="100" />
                         </span>
                         <span>
-                          <span className="contactValue">Заміна роз'єму живлення:</span> {item.name}
+                          <span className="contactValue">Заміна роз'єму живлення:</span>
+                          <span className='itemValue'>{item.name}</span> 
                         </span>
                         <span>
                           <span className="contactValue">Ціна:</span>
-                          {priceCharge} грн
+                          <span className='itemValue'>{priceCharge} грн</span> 
+                          
                         </span>
                         <span>
-                          <span className="contactValue">Наявність:</span>{item.quantity_in_stock} шт
+                          <span className="contactValue">Наявність:</span>
+                          <span className='itemValue'>{item.quantity_in_stock} шт</span> 
                         </span>
 
                       </div>
@@ -87,13 +95,16 @@ export function ItemList ({gsm}) {
                           <img src={item.image} alt="" width="100" height="100" />
                         </span>
                         <span>
-                          <span className="contactValue">Заміна задньої кришки:</span> {item.name}
+                          <span className="contactValue">Заміна задньої кришки:</span> 
+                          <span className='itemValue'>{item.name}</span> 
                         </span>
                         <span>
-                          <span className="contactValue">Ціна:</span>{priceCharge} грн
+                          <span className="contactValue">Ціна:</span>
+                          <span className='itemValue'>{priceCharge} грн</span> 
                         </span>
                         <span>
-                          <span className="contactValue">Наявність:</span>{item.quantity_in_stock} шт
+                          <span className="contactValue">Наявність:</span>
+                          <span className='itemValue'>{item.quantity_in_stock} шт</span> 
                         </span>
 
                       </div>
@@ -110,14 +121,17 @@ export function ItemList ({gsm}) {
                           <img src={item.image} alt="" width="100" height="100" />
                         </span>
                         <span>
-                          <span className="contactValue">Заміна камери (основна, фронтальна):</span> {item.name}
+                          <span className="contactValue">Заміна камери (основна, фронтальна):</span> 
+                          <span className='itemValue'>{item.name}</span> 
                         </span>
                         <span>
                           <span className="contactValue">Ціна:</span>
-                          {priceCharge} грн
+                          <span className='itemValue'>{priceCharge} грн</span> 
+                          
                         </span>
                         <span>
-                          <span className="contactValue">Наявність:</span>{item.quantity_in_stock} шт
+                          <span className="contactValue">Наявність:</span>
+                          <span className='itemValue'>{item.quantity_in_stock} шт</span> 
                         </span>
 
                       </div>
@@ -134,14 +148,17 @@ export function ItemList ({gsm}) {
                           <img src={item.image} alt="" width="100" height="100" />
                         </span>
                         <span>
-                          <span className="contactValue">Заміна акумулятора:</span> {item.name}
+                          <span className="contactValue">Заміна акумулятора:</span> 
+                          <span className='itemValue'>{item.name}</span> 
                         </span>
                         <span>
                           <span className="contactValue">Ціна:</span>
-                          {priceCharge} грн
+                          <span className='itemValue'> {priceCharge} грн</span> 
+                         
                         </span>
                         <span>
-                          <span className="contactValue">Наявність:</span>{item.quantity_in_stock} шт
+                          <span className="contactValue">Наявність:</span>
+                          <span className='itemValue'>{item.quantity_in_stock} шт</span> 
                         </span>
 
                       </div>
@@ -158,14 +175,17 @@ export function ItemList ({gsm}) {
                           <img src={item.image} alt="" width="100" height="100" />
                         </span>
                         <span>
-                          <span className="contactValue">Заміна бузера:</span> {item.name}
+                          <span className="contactValue">Заміна бузера:</span> 
+                          <span className='itemValue'> {item.name}</span> 
                         </span>
                         <span>
                           <span className="contactValue">Ціна:</span>
-                          {priceCharge} грн
+                          <span className='itemValue'>    {priceCharge} грн</span> 
+                      
                         </span>
                         <span>
-                          <span className="contactValue">Наявність:</span>{item.quantity_in_stock} шт
+                          <span className="contactValue">Наявність:</span>
+                          <span className='itemValue'> {item.quantity_in_stock} шт</span> 
                         </span>
 
                       </div>
@@ -182,14 +202,17 @@ export function ItemList ({gsm}) {
                           <img src={item.image} alt="" width="100" height="100" />
                         </span>
                         <span>
-                          <span className="contactValue">Заміна спікера:</span> {item.name}
+                          <span className="contactValue">Заміна спікера:</span> 
+                          <span className='itemValue'>{item.name}</span> 
                         </span>
                         <span>
                           <span className="contactValue">Ціна:</span>
-                          {priceCharge} грн
+                          <span className='itemValue'>  {priceCharge} грн</span> 
+                        
                         </span>
                         <span>
-                          <span className="contactValue">Наявність:</span>{item.quantity_in_stock} шт
+                          <span className="contactValue">Наявність:</span>
+                          <span className='itemValue'> {item.quantity_in_stock} шт</span> 
                         </span>
 
                       </div>
