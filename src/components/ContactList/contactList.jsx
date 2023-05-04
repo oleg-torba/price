@@ -27,6 +27,7 @@ export function ItemList ({gsm}) {
 
             }
 
+          
 
             if (item.name.includes("Дисплей") || item.name.includes('Complete')) {
               return (
@@ -51,7 +52,8 @@ export function ItemList ({gsm}) {
                       </span>
                       <span>
                         <span className="contactValue">Наявність:</span>
-                        <span className="contactItem"> {item.quantity_in_stock} шт</span>
+                        {item.quantity_in_stock !== 0 && <span className="contactItem"> {item.quantity_in_stock} шт</span>}
+                        
 
                       </span>
 
@@ -215,7 +217,7 @@ export function ItemList ({gsm}) {
                       </span>
                       <span>
                         <span className="contactValue">Наявність:</span>
-                        <span className="contactItem"> {priceCharge} грн</span>
+                        <span className="contactItem"> {item.quantity_in_stock} грн</span>
                       </span>
 
                     </div>
@@ -243,7 +245,7 @@ export function ItemList ({gsm}) {
                       </span>
                       <span>
                         <span className="contactValue">Наявність:</span>
-                        <span className="contactItem"> {priceCharge} грн</span>
+                        <span className="contactItem"> {item.quantity_in_stock} грн</span>
                       </span>
 
                     </div>

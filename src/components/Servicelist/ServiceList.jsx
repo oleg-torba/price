@@ -28,7 +28,7 @@ export function ServiceList (){
                  </li>
                  <li className="serviceList">
                  <p className="serviceTown">Новояворівськ, Бандери, 18</p>
-                <p>097-365-28-42</p>
+                <p>067-862-99-19</p>
                  </li>
                  <li className="serviceList">
                  <p className="serviceTown">Недригайлів, Незалежності, 8</p>
