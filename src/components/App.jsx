@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
-import { Feedback } from './Feedback/Feedback';
+
 import { Section } from './Section/section';
 
 import Data from './apiData.json';
