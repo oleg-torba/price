@@ -62,9 +62,9 @@ export function App() {
 
         
       )}
-<Section title=<p>Форма зворотнього зв'язку</p> >
+{/* <Section title=<p>Форма зворотнього зв'язку</p> >
         <Feedback/>
-      </Section>
+      </Section> */}
       <Section title=<p>Доступні сервісні центри</p> >
         <ServiceList/>
       </Section>
