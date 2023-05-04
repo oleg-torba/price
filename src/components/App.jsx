@@ -35,11 +35,12 @@ export function App() {
 
   return (
     <>
-      <Section >
+      <Section title='Для здійснення пошуку, введіть модель пристрою нижче' >
         <form className="form" onSubmit={handleSubmit}>
+        
           <input
             className="formInput"
-            placeholder="Введіть модель для пошуку"
+            placeholder="Enter model here"
             name="data"
             value={inputValue}
             onChange={handleChange}
