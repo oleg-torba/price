@@ -214,7 +214,7 @@ export function ItemList ({gsm}) {
                         </span>
                         <span>
                           <span className="contactValue">Наявність:</span>
-                          <span className="contactItem">{item.quantity_in_stock} шт</span> 
+                          <span className="contactItem"> {priceCharge} грн</span> 
                         </span>
 
                       </div>
@@ -231,26 +231,3 @@ export function ItemList ({gsm}) {
         </div>
     )
 }
-
-// export function Contact({ gsm }) {
-
-//   console.log(gsm)
-//   return (
-   
-//   );
- 
-  
-// }
-
-// Contact.propTypes = {
-//   contacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       data: PropTypes.shape({
-//         name: PropTypes.string.isRequired,
-//         number: PropTypes.string.isRequired,
-//       }),
-//     })
-//   ),
-
-// };
