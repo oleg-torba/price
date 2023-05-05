@@ -45,7 +45,7 @@ export function ApiPartsList ({parts}) {
 
               </span>
               <span
-                    className="provider">Provider: 1000P
+                    className="provider">Provider: 1Part
                       </span>
             </div>
           
