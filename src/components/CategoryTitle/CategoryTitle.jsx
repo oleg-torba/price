@@ -5,7 +5,7 @@ export function CategoryItem (){
     
     <>
     <div className="category__container">
-    <h2>Функціонал у розробці!</h2>
+    <h2>Незабаром буде працювати</h2>
     <div className="category">
         
         <button className="categoryBtn" type='button'>Ремонт телефонів</button>

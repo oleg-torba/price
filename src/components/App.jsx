@@ -8,7 +8,7 @@ import { Form } from './Form/form';
 import { Section } from './Section/section';
 
 import Data from './apiData.json';
-import Parts from './1000parts.json'
+import Parts from './1000parts.json';
 
 export function App() {
   // const [inputValue, setInputValue] = useState('');
@@ -16,12 +16,12 @@ export function App() {
   const [gsm, setGsm] = useState([]);
   const [parts, setParts] = useState([]);
   gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
+  parts.sort((a, b) => (a.name > b.name ? 1 : -1));
   const data = Data.shop.items.item;
-  const partList = Parts.yml_catalog.shop.offers.offer
-  console.log(parts)
+  const partList = Parts.yml_catalog.shop.offers.offer;
+  const totalItems = gsm.length + parts.length;
 
-
-  useEffect(()=>{
+  useEffect(() => {
     if (searchQuery === '') {
       return;
     }
@@ -31,12 +31,11 @@ export function App() {
       )
     );
     setParts(
-      partList.filter(data=>
+      partList.filter(data =>
         data.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
-  }, [data, partList, searchQuery])
-
+  }, [data, partList, searchQuery]);
 
   function formSubmit(query) {
     if (query === searchQuery) {
@@ -45,39 +44,33 @@ export function App() {
     setSearchQuery(query.toLowerCase());
     setGsm([]);
     setParts([]);
-
-    // setError(null);
   }
-  console.log(gsm.name)
+  console.log(gsm.name);
 
   return (
     <>
-
-
-      <Section title=<p>Введіть модель пристрою у поле нижче</p> >
-       <Form onSubmit={formSubmit}/>
+      <Section title=<p>Введіть модель пристрою у поле нижче</p>>
+        <Form onSubmit={formSubmit} />
       </Section>
-    
-    <Section>
-   < CategoryItem/>
-    </Section>
+
+      <Section>
+        <CategoryItem />
+      </Section>
       {gsm.length > 0 && (
         <Section
           title=<p>
-            За запитом "{searchQuery}" ми знайшли {gsm.length} позицій
+            За запитом "{searchQuery}" ми знайшли {totalItems} позицій
           </p>
         >
           <ItemList gsm={gsm} />
-          <ApiPartsList parts = {parts}/>
+          <ApiPartsList parts={parts} />
         </Section>
-
-        
       )}
-{/* <Section title=<p>Форма зворотнього зв'язку</p> >
-        <Feedback/>
-      </Section> */}
-      <Section title=<p>Доступні сервісні центри</p> >
-        <ServiceList/>
+<Section title=<p>Відгуки про нас (згодом)</p>>
+  
+      </Section>
+      <Section title=<p>Доступні сервісні центри</p>>
+        <ServiceList />
       </Section>
     </>
   );

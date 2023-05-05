@@ -6,12 +6,23 @@ import React from 'react';
 
 export function ApiPartsList ({parts}) {
 
+
     return (
 
       <div className="contactBlock">
         <ul className="contactsList">
           {parts.map((item)=>{
-           let priceTouch = Math.ceil((item.price + 500) / 100) * 100;
+                let priceTouch = Math.ceil((item.price + 500) / 100) * 100;
+            if(item.name.includes('та дисплей')){
+              priceTouch = Math.ceil((item.price + 800) / 100) * 100;
+            }
+            if(item.price >=2500){
+              priceTouch = Math.ceil((item.price + 1200) / 100) * 100;
+            }
+            if(item.name.includes('акумулятор')){
+              priceTouch = Math.ceil((item.price + 600) / 100) * 100;
+            }
+       
            return(
             <li className="contactsItem" key={item.name}>
             <div className="contact">
@@ -29,7 +40,7 @@ export function ApiPartsList ({parts}) {
             
               <span>
                 <span className="contactValue">Наявність:</span>
-                {item.quantity_in_stock !== 0 && <span className="contactItem">  шт</span>}
+                {<span className="contactItem">Є</span>}
                 
 
               </span>
