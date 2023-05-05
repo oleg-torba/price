@@ -3,7 +3,7 @@ import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
 import { CategoryItem } from './CategoryTitle/CategoryTitle';
 import { ApiPartsList } from './Api1000Parts/Api1000Parts';
-import { Form } from './Form/form';
+import { Header } from './Header/Header';
 
 import { Section } from './Section/section';
 
@@ -45,16 +45,18 @@ export function App() {
     setGsm([]);
     setParts([]);
   }
-  console.log(gsm.name);
+
 
   return (
     <>
-      <Section title=<p>Введіть модель пристрою у поле нижче</p>>
-        <Form onSubmit={formSubmit} />
+      <Section>
+      <Header onSubmit = {formSubmit}/>
       </Section>
+      
+      
 
       <Section>
-        <CategoryItem />
+        <CategoryItem gsm = {gsm} parts={parts}/>
       </Section>
       {gsm.length > 0 && (
         <Section
@@ -66,9 +68,7 @@ export function App() {
           <ApiPartsList parts={parts} />
         </Section>
       )}
-<Section title=<p>Відгуки про нас (згодом)</p>>
-  
-      </Section>
+      <Section title=<p>Відгуки про нас (згодом)</p>></Section>
       <Section title=<p>Доступні сервісні центри</p>>
         <ServiceList />
       </Section>
