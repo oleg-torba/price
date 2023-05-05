@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(43, 38, 38);
+  background-color: whitesmoke;
 }
 
 code {
@@ -42,7 +42,7 @@ p {
 .formInput {
   width: 80%;
   height: 33px;
-  border: 1px solid #02be6e;
+  border: 1px solid blue;
   border-radius: 10px;
   outline: none;
   margin-right: 10px;
@@ -53,7 +53,7 @@ p {
 button {
  
   width: 100px;
-  background-color: green;
+  background-color: blue;
   outline: none;
   border: none;
   border-radius: 10px;
@@ -79,10 +79,7 @@ button {
   justify-content: center;
   height: 280px;
   width: 350px;
-
-
-
-  border: 1.5px solid white;
+  border: 1.5px solid lightgray;
   border-radius: 4px;
   margin-bottom: 10px;
   padding: 10px;
@@ -90,13 +87,10 @@ button {
 
 }
 
-.contactItem{
-  color: white;
 
-}
 .contactValue {
   display: inline-block;
-  color: darkorange;
+  color: black;
   font-weight: 600;
   margin-bottom: 5px;
 }
@@ -128,7 +122,9 @@ li {
 
 .section {
   padding: 20px 40px;
-  color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
 
 }
 
@@ -216,4 +212,11 @@ textarea{
 .serviceLink {
   display: block;
   margin-top: 10px;
+}
+.contactItem{
+  color: #757575;
+}
+
+.provider{
+  margin: 0;
 }

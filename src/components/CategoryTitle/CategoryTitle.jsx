@@ -8,9 +8,9 @@ export function CategoryItem (){
     <h2>Функціонал у розробці!</h2>
     <div className="category">
         
-        <button className="categoryBtn" type='button'>Ціни для ремонту телефонів</button>
-    <button className="categoryBtn" type='button'>Ціни для ремонту планшетів</button>
-    <button className="categoryBtn" type='button'>Ціни для ремонту iPhone</button></div>
+        <button className="categoryBtn" type='button'>Ремонт телефонів</button>
+    <button className="categoryBtn" type='button'>Ремонт планшетів</button>
+    <button className="categoryBtn" type='button'>Ремонт iPhone</button></div>
     </div>
   </>
     )

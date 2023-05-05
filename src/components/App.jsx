@@ -1,15 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
 import { CategoryItem } from './CategoryTitle/CategoryTitle';
 import { ApiPartsList } from './Api1000Parts/Api1000Parts';
+import { Form } from './Form/form';
+
 import { Section } from './Section/section';
 
 import Data from './apiData.json';
 import Parts from './1000parts.json'
 
 export function App() {
-  const [inputValue, setInputValue] = useState('');
+  // const [inputValue, setInputValue] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [gsm, setGsm] = useState([]);
   const [parts, setParts] = useState([]);
   gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
@@ -17,49 +20,42 @@ export function App() {
   const partList = Parts.yml_catalog.shop.offers.offer
   console.log(parts)
 
-  const handleChange = e => {
-    const inputValue = e.target.value;
-    setInputValue(inputValue);
-    console.log(inputValue);
-  };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (inputValue === '') {
-      alert('Заповність поле пошуку');
+  useEffect(()=>{
+    if (searchQuery === '') {
       return;
     }
-
     setGsm(
       data.filter(contact =>
-        contact.name.toLowerCase().includes(inputValue.toLowerCase())
+        contact.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
     setParts(
       partList.filter(data=>
-        data.name.toLowerCase().includes(inputValue.toLowerCase())
+        data.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
-  };
+  }, [searchQuery])
+
+
+  function formSubmit(query) {
+    if (query === searchQuery) {
+      alert('Enter another query');
+    }
+    setSearchQuery(query.toLowerCase());
+    setGsm([]);
+    setParts([]);
+
+    // setError(null);
+  }
   console.log(gsm.name)
 
   return (
     <>
-      <Section title='Для здійснення пошуку, введіть модель пристрою нижче' >
-        <form className="form" onSubmit={handleSubmit}>
-        
-          <input
-            className="formInput"
-            placeholder="Enter model here"
-            name="data"
-            value={inputValue}
-            onChange={handleChange}
-          />
 
-          <button className="formBtn" type="submit">
-            Search
-          </button>
-        </form>
+
+      <Section title=<p>Введіть модель пристрою у поле нижче</p> >
+       <Form onSubmit={formSubmit}/>
       </Section>
     
     <Section>
@@ -68,7 +64,7 @@ export function App() {
       {gsm.length > 0 && (
         <Section
           title=<p>
-            За запитом "{inputValue}" ми знайшли {gsm.length} позицій
+            За запитом "{searchQuery}" ми знайшли {gsm.length} позицій
           </p>
         >
           <ItemList gsm={gsm} />

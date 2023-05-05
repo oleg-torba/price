@@ -15,9 +15,7 @@ export function ApiPartsList ({parts}) {
            return(
             <li className="contactsItem" key={item.name}>
             <div className="contact">
-            <span
-            className="contactValue">Постачальник 2
-              </span>
+         
               <span>
                 <img src={item.picture[0]} alt="" width="100" height="100" />
               </span>
@@ -35,7 +33,9 @@ export function ApiPartsList ({parts}) {
                 
 
               </span>
-
+              <span
+                    className="provider">Provider: 1000P
+                      </span>
             </div>
           
   </li>
