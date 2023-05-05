@@ -35,7 +35,7 @@ export function App() {
         data.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
-  }, [searchQuery])
+  }, [data, partList, searchQuery])
 
 
   function formSubmit(query) {
