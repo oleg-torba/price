@@ -2,15 +2,20 @@ import { useState } from 'react';
 import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
 import { CategoryItem } from './CategoryTitle/CategoryTitle';
+import { ApiPartsList } from './Api1000Parts/Api1000Parts';
 import { Section } from './Section/section';
 
 import Data from './apiData.json';
+import Parts from './1000parts.json'
 
 export function App() {
   const [inputValue, setInputValue] = useState('');
   const [gsm, setGsm] = useState([]);
+  const [parts, setParts] = useState([]);
   gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
   const data = Data.shop.items.item;
+  const partList = Parts.yml_catalog.shop.offers.offer
+  console.log(parts)
 
   const handleChange = e => {
     const inputValue = e.target.value;
@@ -28,6 +33,11 @@ export function App() {
     setGsm(
       data.filter(contact =>
         contact.name.toLowerCase().includes(inputValue.toLowerCase())
+      )
+    );
+    setParts(
+      partList.filter(data=>
+        data.name.toLowerCase().includes(inputValue.toLowerCase())
       )
     );
   };
@@ -62,6 +72,7 @@ export function App() {
           </p>
         >
           <ItemList gsm={gsm} />
+          <ApiPartsList parts = {parts}/>
         </Section>
 
         

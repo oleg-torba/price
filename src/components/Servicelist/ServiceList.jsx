@@ -7,7 +7,7 @@ export function ServiceList (){
             <li className="serviceList">
            
             <p className="serviceTown">Львів, вул. Кульпарківська, 59</p>
-                <p>098-188-28-58{' '}<a classname="serviceLink" href="https://t.me/+TuRc4zxZnPZxh3vl"><FaTelegram RiTelegramLine/></a></p>
+                <p>098-188-28-58{' '}<a classname="serviceLink" href="https://t.me/+TuRc4zxZnPZxh3vI"><FaTelegram RiTelegramLine/></a></p>
            
                
                  </li>
