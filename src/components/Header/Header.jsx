@@ -1,4 +1,5 @@
 import { BsTelephone } from "react-icons/bs";
+import { VscTools } from "react-icons/vsc";
 import {useState} from 'react'
 export function Header ({onSubmit}){
     const [searchQuery, setSearchQuery] = useState('');
@@ -17,7 +18,7 @@ export function Header ({onSubmit}){
         <>
 
         <header className="header">
-        <p>Тут колись буде логотип)</p>
+        <VscTools/>
         <form  className="form" onSubmit={handleSubmit}>
         
         <input
