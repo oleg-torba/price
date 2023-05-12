@@ -246,3 +246,9 @@ align-items: center;
 a{
   text-decoration: none;
 }
+
+.filterCategory{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

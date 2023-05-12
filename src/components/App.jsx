@@ -3,6 +3,7 @@ import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
 import { CategoryItem } from './CategoryTitle/CategoryTitle';
 import { ApiPartsList } from './Api1000Parts/Api1000Parts';
+import { FilterCategory } from './FilterCategory/FIlterCategory';
 import { Header } from './Header/Header';
 
 import { Section } from './Section/section';
@@ -53,17 +54,18 @@ export function App() {
       <Header onSubmit = {formSubmit}/>
       </Section>
       
-      
+     
 
-      <Section>
+      {/* <Section>
         <CategoryItem gsm = {gsm} parts={parts}/>
-      </Section>
+      </Section> */}
+     
       {gsm.length > 0 && (
         <Section
           title=<p>
             За запитом "{searchQuery}" ми знайшли {totalItems} позицій
           </p>
-        >
+        > <FilterCategory gsm={gsm}/>
           <ItemList gsm={gsm} />
           <ApiPartsList parts={parts} />
         </Section>
