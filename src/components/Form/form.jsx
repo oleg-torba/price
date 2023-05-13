@@ -21,14 +21,14 @@ export function Form ({onSubmit}) {
         
         <input
           className="formInput"
-          placeholder="Enter model here"
+          placeholder="Введіть модель"
           name="data"
           value={searchQuery}
           onChange={handleChange}
         />
         
         <button className="formBtn" type="submit">
-          Search
+          Пошук
         </button>
         </form>
   )

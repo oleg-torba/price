@@ -2,9 +2,11 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-export function ItemList({ gsm }) {
+export function ItemList({ gsm, filter, onClick }) {
+  console.log(filter)
   return (
     <>
+      
       <div className="contactBlock">
         <ul className="contactsList">
           {gsm.map(item => {

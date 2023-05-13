@@ -16,21 +16,21 @@ export function Header ({onSubmit}){
       };
     return(
         <>
-
+ <VscTools className="icon" size='2rem' fill="blue"/>
         <header className="header">
-        <VscTools/>
+       
         <form  className="form" onSubmit={handleSubmit}>
         
         <input
           className="formInput"
-          placeholder="Enter model here"
+          placeholder="Введіть модель"
           name="data"
           value={searchQuery}
           onChange={handleChange}
         />
         
         <button className="formBtn" type="submit">
-          Search
+          Пошук
         </button>
         </form>
         <a href="tel:098-188-28-58"><BsTelephone/>{'  '}098-188-28-58</a>
