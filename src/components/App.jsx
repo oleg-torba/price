@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
-import { Filter } from './Filter/filterParts';
+
 import { ApiPartsList } from './Api1000Parts/Api1000Parts';
 import { Header } from './Header/Header';
 
