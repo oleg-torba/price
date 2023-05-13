@@ -247,7 +247,6 @@ a{
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 .icon{
   display: block;
   position: fixed;
@@ -261,10 +260,4 @@ a{
 .FilterButton{
   display: flex;
   justify-content: space-between;
-=======
-.filterCategory{
-  display: flex;
-  justify-content: center;
-  align-items: center;
->>>>>>> a5cb63f41203583312573a833675210dbb89b5c3
 }
