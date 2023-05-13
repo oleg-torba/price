@@ -264,4 +264,7 @@ justify-content: center;
 }
 .FilterButton li{
   margin-bottom: 10px;
+  @media screen and (min-width:1200px) {
+    margin-bottom: 0;
+  }
 }
