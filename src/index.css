@@ -259,5 +259,9 @@ a{
 
 .FilterButton{
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+justify-content: center;
+}
+.FilterButton li{
+  margin-bottom: 10px;
 }
