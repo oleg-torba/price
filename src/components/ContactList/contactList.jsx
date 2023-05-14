@@ -258,7 +258,66 @@ export function ItemList({ gsm}) {
                   </li>
                 </>
               );
-            } else {
+            } 
+            if (item.name.includes('Шлейф')) {
+              return (
+                <>
+                  <li className="contactsItem" key={item.name}>
+                    <div className="contact">
+                      <span>
+                        <img src={item.image} alt="" width="100" height="100" />
+                      </span>
+                      <span>
+                        <span className="contactValue">Шлейфові деталі:</span>
+                        <span className="contactItem">{item.name}</span>
+                      </span>
+                      <span>
+                        <span className="contactValue">Ціна:</span>
+                        <span className="contactItem"> {priceCharge} грн</span>
+                      </span>
+                      <span>
+                        <span className="contactValue">Наявність:</span>
+                        <span className="contactItem">
+                          {' '}
+                          {item.quantity_in_stock} грн
+                        </span>
+                      </span>
+                      <span className="provider">Provider: GSM</span>
+                    </div>
+                  </li>
+                </>
+              );
+            }
+            if (item.name.includes('Тачскрін')) {
+              return (
+                <>
+                  <li className="contactsItem" key={item.name}>
+                    <div className="contact">
+                      <span>
+                        <img src={item.image} alt="" width="100" height="100" />
+                      </span>
+                      <span>
+                        <span className="contactValue">Тачскрін:</span>
+                        <span className="contactItem">{item.name}</span>
+                      </span>
+                      <span>
+                        <span className="contactValue">Ціна:</span>
+                        <span className="contactItem"> {priceCharge} грн</span>
+                      </span>
+                      <span>
+                        <span className="contactValue">Наявність:</span>
+                        <span className="contactItem">
+                          {' '}
+                          {item.quantity_in_stock} грн
+                        </span>
+                      </span>
+                      <span className="provider">Provider: GSM</span>
+                    </div>
+                  </li>
+                </>
+              );
+            }
+            else {
               return null;
             }
           })}
