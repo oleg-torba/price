@@ -15,8 +15,7 @@ export function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [gsm, setGsm] = useState([]);
   const [parts, setParts] = useState([]);
-  const [filter, setFilter] = useState([])
-
+  const [filter, setFilter] = useState([]);
 
   gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
   parts.sort((a, b) => (a.name > b.name ? 1 : -1));
@@ -38,17 +37,13 @@ export function App() {
         data.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
-    
-  }, [data,  partList, searchQuery]);
- const filterChange = (e) => {
-  if(gsm.length >1){
-    setFilter(
-      gsm.filter(data=> data.name.includes(e.target.name))
-    )
-  }
+  }, [data, partList, searchQuery]);
+  const filterChange = e => {
+    if (gsm.length > 1) {
+      setFilter(gsm.filter(data => data.name.includes(e.target.name)));
+    }
   
- 
- }
+  };
   function formSubmit(query) {
     if (query === searchQuery) {
       alert('Змініть пошуковий запис');
@@ -56,37 +51,39 @@ export function App() {
     setSearchQuery(query.toLowerCase());
     setGsm([]);
     setParts([]);
-    setFilter([])
+    setFilter([]);
   }
 
-
-  console.log(gsm.length)
   return (
     <>
       <Section>
-      <Header onSubmit = {formSubmit}/>
+        <Header onSubmit={formSubmit} />
       </Section>
-      
-      
 
-    
       {gsm.length > 0 && (
         <Section
           title=<p>
             За запитом "{searchQuery}" ми знайшли {totalItems} позицій
           </p>
         >
-<ul className="FilterButton">
+          <ul className="FilterButton">
             <li>
               <button name="Акумулятор" onClick={filterChange}>
                 Акумулятори
               </button>
             </li>
             <li>
+              <button name="Бузер" onClick={filterChange}>
+                Бузери
+              </button>
+            </li>
+
+            <li>
               <button name="Дисплей" onClick={filterChange}>
                 Дисплеї
               </button>
             </li>
+
             <li>
               <button name="Задня" onClick={filterChange}>
                 Задні кришки
@@ -104,6 +101,11 @@ export function App() {
               </button>
             </li>
             <li>
+              <button name="Динамік" onClick={filterChange}>
+                Спікери
+              </button>
+            </li>
+            <li>
               <button name="Тачскрін" onClick={filterChange}>
                 Сенсори
               </button>
@@ -114,12 +116,16 @@ export function App() {
               </button>
             </li>
           </ul>
-          {filter.length > 0 &&   <><ItemList gsm={filter}  /></>}
-      {filter.length <1 &&<ItemList gsm={gsm} onClick={filterChange}/>}
+          {filter.length > 0 && (
+            <>
+              <ItemList gsm={filter} />
+            </>
+          )}
+          {filter.length < 1 && <ItemList gsm={gsm} onClick={filterChange} />}
           <ApiPartsList parts={parts} />
         </Section>
       )}
-      
+
       <Section title=<p>Відгуки про нас (згодом)</p>></Section>
       <Section title=<p>Доступні сервісні центри</p>>
         <ServiceList />

@@ -2,8 +2,8 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-export function ItemList({ gsm, filter, onClick }) {
-  console.log(filter)
+export function ItemList({ gsm}) {
+
   return (
     <>
       
