@@ -8,15 +8,15 @@ export function ItemList({ gsm}) {
     <>
        <ul className="contactsList">
           {gsm.map(item => {
-            let priceLCD = Math.ceil(((item.price + 20) * 37.8) / 100) * 100;
+            let priceLCD = Math.ceil(((item.price + 20) * 37.8) / 50) * 50;
 
-            let priceCharge = Math.ceil(((item.price + 10) * 37.8) / 100) * 100;
-            let glassCam = Math.ceil(((item.price + 8) * 37.8) / 100) * 100;
+            let priceCharge = Math.ceil(((item.price + 10) * 37.8) / 50) * 50;
+            let glassCam = Math.ceil(((item.price + 8) * 37.8) / 50) * 50;
             if (item.price >= 25) {
-              priceLCD = Math.ceil(((item.price + 25) * 37.8) / 100) * 100;
+              priceLCD = Math.ceil(((item.price + 25) * 37.8) / 50) * 50;
             }
             if (item.price >= 60) {
-              priceLCD = Math.ceil(((item.price + 30) * 37.8) / 100) * 100;
+              priceLCD = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
             }
 
             if (
