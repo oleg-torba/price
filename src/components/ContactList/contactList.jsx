@@ -6,9 +6,7 @@ export function ItemList({ gsm}) {
 
   return (
     <>
-      
-      <div className="contactBlock">
-        <ul className="contactsList">
+       <ul className="contactsList">
           {gsm.map(item => {
             let priceLCD = Math.ceil(((item.price + 20) * 37.8) / 100) * 100;
 
@@ -322,7 +320,7 @@ export function ItemList({ gsm}) {
             }
           })}
         </ul>
-      </div>
+     
     </>
   );
 }

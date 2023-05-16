@@ -77,7 +77,6 @@ button {
   align-items: center; 
  flex-wrap: wrap; 
   padding: 0;
-  padding: 20px;
 }
 
 
@@ -87,7 +86,7 @@ button {
   flex-direction: column;
   justify-content: center;
   height: 280px;
-  width: 300px;
+  width: 280px;
   border: 1.5px solid lightgray;
   border-radius: 4px;
   margin-bottom: 10px;
@@ -251,6 +250,7 @@ textarea{
 }
 .contactItem{
   color: #757575;
+
 }
 
 .provider{
@@ -281,13 +281,34 @@ a{
 }
 
 .FilterButton{
-  display: flex;
-  flex-wrap: wrap;
-justify-content: center;
+  margin-bottom: 20px;
+display: flex;
+flex-wrap: wrap;
+@media screen and (min-width:768px) {
+  display: block;
+  margin-bottom: 0;
 }
+
+padding: 20px;
+ border: 1px solid lightgray;
+ border-radius: 4px;
+} 
 .FilterButton li{
   margin-bottom: 10px;
-  @media screen and (min-width:1200px) {
+  &:last-child{
     margin-bottom: 0;
   }
+ 
+} 
+
+.itemBlock{
+  display: flex;
+flex-direction: column;
+@media screen and (min-width:768px) {
+  flex-direction: row;
+}
+}
+
+.items{
+  margin: 0 auto;
 }

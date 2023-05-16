@@ -9,9 +9,9 @@ export function ApiPartsList ({parts}) {
 
     return (
 
-      <div className="contactBlock">
-        <ul className="contactsList">
-          {parts.map((item)=>{
+   
+        
+          parts.map((item)=>{
                 let priceTouch = Math.ceil((item.price + 500) / 100) * 100;
             if(item.name.includes('та дисплей')){
               priceTouch = Math.ceil((item.price + 800) / 100) * 100;
@@ -24,6 +24,7 @@ export function ApiPartsList ({parts}) {
             }
        
            return(
+            <ul className="contactsList">
             <li className="contactsItem" key={item.name}>
             <div className="contact">
          
@@ -50,12 +51,13 @@ export function ApiPartsList ({parts}) {
             </div>
           
   </li>
+   </ul>
            )
            
 
-})}
-        </ul>
-      </div>
+})
+       
+      
 
     )
      

@@ -65,7 +65,12 @@ export function App() {
           title=<p>
             За запитом "{searchQuery}" ми знайшли {totalItems} позицій
           </p>
+        
         >
+          <div className='itemBlock'>
+<div>
+          
+      
           <ul className="FilterButton">
             <li>
               <button name="Акумулятор" onClick={filterChange}>
@@ -116,13 +121,19 @@ export function App() {
               </button>
             </li>
           </ul>
+          
+            </div>
+         <div className='items'>
           {filter.length > 0 && (
-            <>
+            
               <ItemList gsm={filter} />
-            </>
+          
           )}
-          {filter.length < 1 && <ItemList gsm={gsm} onClick={filterChange} />}
-          <ApiPartsList parts={parts} />
+           <ApiPartsList parts={parts} />
+           {filter.length < 1 && <ItemList gsm={gsm} onClick={filterChange} />}
+         </div>
+          </div>
+          
         </Section>
       )}
 
