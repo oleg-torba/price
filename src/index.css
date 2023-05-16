@@ -68,6 +68,7 @@ button {
   border-radius: 10px;
   height: 35px;
   color: aliceblue;
+  cursor: pointer;
 }
 
 .contactsList {
@@ -170,12 +171,6 @@ a{
   color: deepskyblue;
 }
 
-/* button{
- display: flex;
- justify-content: center;
- align-items: center;
- width: 100px;
-} */
 
 span{
   font-weight: 500;
