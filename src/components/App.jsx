@@ -51,13 +51,13 @@ export function App() {
   }, [data, partList, searchQuery]);
   const filterChange = e => {
     if (gsm.length > 1) {
-      setFilter(gsm.filter(data => data.name.includes(e.target.name)));
+      setFilter(gsm.filter(data => data.name.toLowerCase().includes(e.target.name.toLowerCase())));
     }
   
   };
   function formSubmit(query) {
     if (query === searchQuery) {
-      alert('Змініть пошуковий запис');
+      alert('Змініть пошуковий запит');
     }
     setSearchQuery(query.toLowerCase());
     setGsm([]);
