@@ -71,6 +71,12 @@ button {
   cursor: pointer;
 }
 
+
+.formBtn {
+  @media screen and (max-width:768px) {
+    margin-bottom: 10px;
+  }
+}
 .contactsList {
   display: flex;
 
