@@ -9,7 +9,7 @@ import { Section } from './Section/section';
 
 import Data from './apiData.json';
 import Parts from './1000parts.json';
-import { BsCamera } from 'react-icons/bs';
+
 
 export function App() {
   // const [inputValue, setInputValue] = useState('');
@@ -27,7 +27,7 @@ export function App() {
  const battery = gsm.filter(i=> i.name.includes("Акумулятор"))
  const lcd = gsm.filter(i=> i.name.includes("Дисплей"))
  const buzzer = gsm.filter(i=> i.name.includes("Бузер"))
- const backCover = gsm.filter(i=> i.name.includes("Задня"))
+ const backCover = gsm.filter(i=> i.name.includes("Задня") || i.name.includes("Кришка"))
  const camera = gsm.filter(i=> i.name.includes("Камера"))
  const charge = gsm.filter(i=> i.name.includes("Роз'єм"))
  const speaker = gsm.filter(i=> i.name.includes("Динамік"))

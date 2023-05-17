@@ -84,7 +84,7 @@ export function ItemList({ gsm}) {
                 </>
               );
             }
-            if (item.name.includes('Задня')) {
+            if (item.name.includes('Задня') || item.name.includes('Кришка задня')) {
               return (
                 <>
                   <li className="contactsItem" key={item.name}>
