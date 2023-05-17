@@ -33,6 +33,7 @@ export function App() {
  const speaker = gsm.filter(i=> i.name.includes("Динамік"))
  const flat = gsm.filter(i=> i.name.includes("Шлейф"))
  const touch = gsm.filter(i=> i.name.includes("Тачскрін"))
+ const corps = gsm.filter(i=> i.name.includes("Корпус"))
 
   useEffect(() => {
     if (searchQuery === '') {
@@ -109,6 +110,11 @@ export function App() {
             <li>
               <button name="Камера" onClick={filterChange}>
                 Камери: ({camera.length})
+              </button>
+            </li>
+            <li>
+              <button name="Корпус" onClick={filterChange}>
+                Корпус: ({corps.length})
               </button>
             </li>
             <li>

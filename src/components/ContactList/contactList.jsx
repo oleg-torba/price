@@ -84,6 +84,36 @@ export function ItemList({ gsm}) {
                 </>
               );
             }
+            if (
+              item.name.includes("Корпус") 
+            ) {
+              return (
+                <>
+                  <li className="contactsItem" key={item.name}>
+                    <div className="contact">
+                      <span>
+                        <img src={item.image} alt="" width="100" height="100" />
+                      </span>
+                      <span>
+                        <span className="contactValue">Корпус:</span>
+                        <span className="contactItem"> {item.name}</span>
+                      </span>
+                      <span>
+                        <span className="contactValue">Ціна:</span>
+                        <span className="contactItem">{priceCharge} грн</span>
+                      </span>
+                      <span>
+                        <span className="contactValue">Наявність:</span>
+                        <span className="contactItem">
+                          {item.quantity_in_stock} шт
+                        </span>
+                      </span>
+                      <span className="provider">Provider: GSM</span>
+                    </div>
+                  </li>
+                </>
+              );
+            }
             if (item.name.includes('Задня') || item.name.includes('Кришка задня')) {
               return (
                 <>
