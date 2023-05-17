@@ -30,6 +30,9 @@ export function App() {
  const backCover = gsm.filter(i=> i.name.includes("Задня"))
  const camera = gsm.filter(i=> i.name.includes("Камера"))
  const charge = gsm.filter(i=> i.name.includes("Роз'єм"))
+ const speaker = gsm.filter(i=> i.name.includes("Динамік"))
+ const flat = gsm.filter(i=> i.name.includes("Шлейф"))
+ const touch = gsm.filter(i=> i.name.includes("Тачскрін"))
 
   useEffect(() => {
     if (searchQuery === '') {
@@ -115,17 +118,17 @@ export function App() {
             </li>
             <li>
               <button name="Динамік" onClick={filterChange}>
-                Спікери
+                Спікери: ({speaker.length})
               </button>
             </li>
             <li>
               <button name="Тачскрін" onClick={filterChange}>
-                Сенсори
+                Сенсори: ({touch.length})
               </button>
             </li>
             <li>
               <button name="Шлейф" onClick={filterChange}>
-                Шлейфи
+                Шлейфи: ({flat.length})
               </button>
             </li>
           </ul>
