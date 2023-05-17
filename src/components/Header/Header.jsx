@@ -29,7 +29,7 @@ export function Header({ onSubmit }) {
             Пошук
           </button>
         </form>
-        <a href="tel:098-188-28-58">
+        <a className='phone' href="tel:098-188-28-58">
           <BsTelephone />
           {'  '}098-188-28-58
         </a>

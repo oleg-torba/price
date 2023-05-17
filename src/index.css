@@ -56,6 +56,18 @@ button {
     width: 70%;
   }
 }
+
+
+  @media screen and (max-width: 768px) {
+    .phone{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px;
+    }
+    
+  }
+
 p {
   font-weight: 600;
 }
@@ -242,12 +254,7 @@ textarea {
 
 a {
   text-decoration: none;
-  @media screen and (max-width: 768px) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 5px;
-  }
+ 
 }
 
 .FilterButton {
