@@ -259,9 +259,9 @@ textarea{
 }
 
 .header{
-  position: relative;
+
 display: flex;
-flex-direction: column;
+flex-direction: column-reverse;
 align-items: center;
 
 @media screen and (min-width:768px) {
@@ -276,21 +276,25 @@ a{
 .icon{
   display: block;
   position: absolute;
-  top: 1%;
-  left: 20;
+
+  top:30;
+  left:20;
 
  
  
 }
 
-.phone{
+/* .phone{
   position: absolute;
 
-  top: 1%;
-  right: 5%;
+  bottom: 1;
+  right: 50;
   margin-bottom: 10px;
+  @media screen and (min-width:768px){
+    position:static;
+  }
   
-}
+} */
 
 .FilterButton{
   margin-bottom: 20px;

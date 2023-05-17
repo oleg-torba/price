@@ -1,5 +1,5 @@
 import { BsTelephone } from "react-icons/bs";
-import { VscTools } from "react-icons/vsc";
+
 import {useState} from 'react'
 export function Header ({onSubmit}){
     const [searchQuery, setSearchQuery] = useState('');
@@ -16,7 +16,7 @@ export function Header ({onSubmit}){
       };
     return(
         <>
- <VscTools className="icon" size='2rem' fill="blue"/>
+
         <header className="header">
        
         <form  className="form" onSubmit={handleSubmit}>
@@ -33,8 +33,8 @@ export function Header ({onSubmit}){
           Пошук
         </button>
         </form>
-     
+        <a className="phone" href="tel:098-188-28-58"><BsTelephone/>{'  '}098-188-28-58</a>
             </header>
-            <a className="phone" href="tel:098-188-28-58"><BsTelephone/>{'  '}098-188-28-58</a></>
+         </>
     )
 }
