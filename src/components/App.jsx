@@ -9,6 +9,7 @@ import { Section } from './Section/section';
 
 import Data from './apiData.json';
 import Parts from './1000parts.json';
+import { BsCamera } from 'react-icons/bs';
 
 export function App() {
   // const [inputValue, setInputValue] = useState('');
@@ -22,6 +23,13 @@ export function App() {
   const data = Data.shop.items.item;
   const partList = Parts.yml_catalog.shop.offers.offer;
   const totalItems = gsm.length + parts.length;
+
+ const battery = gsm.filter(i=> i.name.includes("Акумулятор"))
+ const lcd = gsm.filter(i=> i.name.includes("Дисплей"))
+ const buzzer = gsm.filter(i=> i.name.includes("Бузер"))
+ const backCover = gsm.filter(i=> i.name.includes("Задня"))
+ const camera = gsm.filter(i=> i.name.includes("Камера"))
+ const charge = gsm.filter(i=> i.name.includes("Роз'єм"))
 
   useEffect(() => {
     if (searchQuery === '') {
@@ -74,35 +82,35 @@ export function App() {
           <ul className="FilterButton">
             <li>
               <button name="Акумулятор" onClick={filterChange}>
-                Акумулятори
+                Акумулятори: ({battery.length})
               </button>
             </li>
             <li>
               <button name="Бузер" onClick={filterChange}>
-                Бузери
+                Бузери: ({buzzer.length})
               </button>
             </li>
 
             <li>
               <button name="Дисплей" onClick={filterChange}>
-                Дисплеї
+                Дисплеї: ({lcd.length})
               </button>
             </li>
 
             <li>
               <button name="Задня" onClick={filterChange}>
-                Задні кришки
+                Задні кришки: ({backCover.length})
               </button>
             </li>
 
             <li>
               <button name="Камера" onClick={filterChange}>
-                Камери
+                Камери: ({camera.length})
               </button>
             </li>
             <li>
               <button name="Роз'єм" onClick={filterChange}>
-                Роз'єми
+                Роз'єми: ({charge.length})
               </button>
             </li>
             <li>
