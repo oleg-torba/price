@@ -13,7 +13,7 @@ export function ItemList({ gsm }) {
           let priceCharge = Math.ceil(((item.price + 10) * 37.8) / 50) * 50;
           let glassCam = Math.ceil(((item.price + 8) * 37.8) / 50) * 50;
           let iphoneRepair = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
-          let iphoneRepairNew = Math.ceil(((item.price + 50) * 37.8) / 50) * 50;
+         
 const newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone XS") ||
  item.name.includes("iPhone XS Max") || item.name.includes("iPhone 11") ||
  item.name.includes("iPhone 11 Pro")|| item.name.includes("iPhone 11 Pro Max")|| item.name.includes("iPhone 12")
