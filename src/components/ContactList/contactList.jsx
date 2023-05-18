@@ -7,10 +7,20 @@ export function ItemList({ gsm }) {
     <>
       <ul className="contactsList">
         {gsm.map(item => {
+          
           let priceLCD = Math.ceil(((item.price + 20) * 37.8) / 50) * 50;
 
           let priceCharge = Math.ceil(((item.price + 10) * 37.8) / 50) * 50;
           let glassCam = Math.ceil(((item.price + 8) * 37.8) / 50) * 50;
+          let iphoneRepair = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
+          let iphoneRepairNew = Math.ceil(((item.price + 50) * 37.8) / 50) * 50;
+const newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone XS") ||
+ item.name.includes("iPhone XS Max") || item.name.includes("iPhone 11") ||
+ item.name.includes("iPhone 11 Pro")|| item.name.includes("iPhone 11 Pro Max")|| item.name.includes("iPhone 12")
+ || item.name.includes("iPhone 12 Mini") || item.name.includes("iPhone 12 Pro")||
+ item.name.includes("iPhone 12 Pro Max")
+
+
           if (item.price >= 25) {
             priceLCD = Math.ceil(((item.price + 25) * 37.8) / 50) * 50;
           }
@@ -66,7 +76,9 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      <span className="contactItem">{priceCharge} грн</span>
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
+                     
+                     
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
@@ -94,7 +106,7 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      <span className="contactItem">{priceCharge} грн</span>
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
@@ -125,7 +137,7 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      <span className="contactItem">{priceCharge} грн</span>
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
@@ -155,7 +167,7 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      <span className="contactItem">{priceCharge} грн</span>
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
@@ -183,7 +195,7 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      <span className="contactItem"> {priceCharge} грн</span>
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
@@ -211,7 +223,7 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      <span className="contactItem"> {priceCharge} грн</span>
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
@@ -240,7 +252,7 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      <span className="contactItem"> {priceCharge} грн</span>
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
@@ -298,7 +310,7 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      <span className="contactItem"> {priceCharge} грн</span>
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
