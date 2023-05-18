@@ -39,7 +39,7 @@ export function ServiceList (){
                  <li className="serviceList">
                
                  <p className="serviceTown">Недригайлів, Незалежності, 8</p>
-                <p>098-904-49-44{' '} <a  href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink"><FaTelegram RiTelegramLine/></a></p>
+                <p>067-439-46-79{' '} <a  href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink"><FaTelegram RiTelegramLine/></a></p>
         
                  </li>
                  <li className="serviceList">
