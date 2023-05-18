@@ -13,12 +13,16 @@ export function ItemList({ gsm }) {
           let priceCharge = Math.ceil(((item.price + 10) * 37.8) / 50) * 50;
           let glassCam = Math.ceil(((item.price + 8) * 37.8) / 50) * 50;
           let iphoneRepair = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
+          let newIphoneRepair = Math.ceil(((item.price + 40) * 37.8) / 50) * 50;
          
 const newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone XS") ||
  item.name.includes("iPhone XS Max") || item.name.includes("iPhone 11") ||
  item.name.includes("iPhone 11 Pro")|| item.name.includes("iPhone 11 Pro Max")|| item.name.includes("iPhone 12")
  || item.name.includes("iPhone 12 Mini") || item.name.includes("iPhone 12 Pro")||
- item.name.includes("iPhone 12 Pro Max")
+ item.name.includes("iPhone 12 Pro Max")||
+ item.name.includes("iPhone 13 Pro Max")||
+ item.name.includes("iPhone 13 Pro")||
+ item.name.includes("iPhone 13")
 
 
           if (item.price >= 25) {
@@ -42,7 +46,7 @@ const newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone X
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      <span className="contactItem">{priceLCD} грн</span>
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
@@ -106,7 +110,7 @@ const newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone X
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
+                      {newIphone  ? <span className="contactItem">{newIphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>

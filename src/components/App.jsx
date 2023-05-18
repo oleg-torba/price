@@ -68,7 +68,8 @@ export function App() {
 
   return (
     <>
-      <Section>
+    <div className='container'>
+    <Section>
         <Header onSubmit={formSubmit} />
       </Section>
 
@@ -158,6 +159,8 @@ export function App() {
       <Section title=<p>Доступні сервісні центри</p>>
         <ServiceList />
       </Section>
+    </div>
+      
     </>
   );
 }

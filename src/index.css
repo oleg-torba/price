@@ -58,19 +58,6 @@ button {
 }
 
 
-  @media screen and (max-width: 768px) {
-    .phone{
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 5px;
-    }
-    .formInput{
-      margin: 10px 0;
-    }
-    
-  }
-
 p {
   font-weight: 600;
 }
@@ -142,6 +129,37 @@ li {
   margin-bottom: 20px;
 }
 
+  .container {
+    @media screen and (min-width:320px) {
+        width: 100%;}
+   
+   
+   @media screen and (min-width:480px) {
+       width: 480px;
+   }
+   
+   @media screen and (min-width:768px) and (max-width:1199px) {
+       width: 768px;
+   }
+   
+   @media screen and (min-width: 1024px) {
+       width: 1200px;
+   }
+}
+
+@media screen and (max-width: 767px) {
+
+  .phone{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+  }
+  .formInput{
+    margin: 10px 0;
+  }
+  
+}
 .section {
   color: black;
   font-size: 16px;
@@ -149,24 +167,11 @@ li {
   padding: 15px 15px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: 480px) {
-    .container {
-      width: 480px;
-    }
+ 
   }
 
-  @media screen and (min-width: 768px) {
-    .container {
-      width: 768px;
-    }
-  }
+  
 
-  @media screen and (min-width: 1200px) {
-    .container {
-      width: 1200px;
-    }
-  }
-}
 
 .title {
   display: inline-block;
