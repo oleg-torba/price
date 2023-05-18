@@ -1,6 +1,6 @@
-// /* eslint-disable array-callback-return */
+
 import React from 'react';
-// import PropTypes from 'prop-types';
+
 
 export function ItemList({ gsm }) {
   return (
@@ -9,27 +9,27 @@ export function ItemList({ gsm }) {
         {gsm.map(item => {
           
           let priceLCD = Math.ceil(((item.price + 20) * 37.8) / 50) * 50;
-
           let priceCharge = Math.ceil(((item.price + 10) * 37.8) / 50) * 50;
-          let glassCam = Math.ceil(((item.price + 8) * 37.8) / 50) * 50;
+          let glassCam = Math.ceil(((item.price + 10) * 37.8) / 50) * 50;
           let iphoneRepair = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
           let newIphoneRepair = Math.ceil(((item.price + 40) * 37.8) / 50) * 50;
          
-const newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone XS") ||
+let newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone XS") ||
  item.name.includes("iPhone XS Max") || item.name.includes("iPhone 11") ||
  item.name.includes("iPhone 11 Pro")|| item.name.includes("iPhone 11 Pro Max")|| item.name.includes("iPhone 12")
  || item.name.includes("iPhone 12 Mini") || item.name.includes("iPhone 12 Pro")||
  item.name.includes("iPhone 12 Pro Max")||
  item.name.includes("iPhone 13 Pro Max")||
  item.name.includes("iPhone 13 Pro")||
- item.name.includes("iPhone 13")
+ item.name.includes("iPhone 13");
 
 
           if (item.price >= 25) {
             priceLCD = Math.ceil(((item.price + 25) * 37.8) / 50) * 50;
           }
-          if (item.price >= 60) {
-            priceLCD = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
+        if (item.price >= 60) {
+          // eslint-disable-next-line no-unused-vars
+          priceLCD = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
           }
 
           if (item.name.includes('Дисплей') || item.name.includes('Complete')) {
