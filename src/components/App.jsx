@@ -25,14 +25,15 @@ export function App() {
 
  const battery = gsm.filter(i=> i.name.includes("Акумулятор"))
  const lcd = gsm.filter(i=> i.name.includes("Дисплей"))
- const buzzer = gsm.filter(i=> i.name.includes("Бузер"))
+ const buzzer = gsm.filter(i=> i.name.toLowerCase().includes("бузер"))
  const backCover = gsm.filter(i=> i.name.includes("Задня") || i.name.includes("Кришка"))
  const camera = gsm.filter(i=> i.name.includes("Камера"))
  const charge = gsm.filter(i=> i.name.includes("Роз'єм"))
- const speaker = gsm.filter(i=> i.name.includes("Динамік"))
+ const speaker = gsm.filter(i=> i.name.toLowerCase().includes("динамік"))
  const flat = gsm.filter(i=> i.name.includes("Шлейф"))
  const touch = gsm.filter(i=> i.name.includes("Тачскрін"))
  const corps = gsm.filter(i=> i.name.includes("Корпус"))
+ console.log(speaker)
 
   useEffect(() => {
     if (searchQuery === '') {
