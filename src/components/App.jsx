@@ -40,7 +40,7 @@ export function App() {
     }
     setGsm(
       data.filter(contact =>
-        contact.name.toLowerCase().indexOf(searchQuery.toLowerCase())
+        contact.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
     setParts(
