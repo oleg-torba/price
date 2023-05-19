@@ -46,7 +46,7 @@ let newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone XS"
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
+                      {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceLcd} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
