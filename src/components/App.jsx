@@ -12,7 +12,6 @@ import Parts from './1000parts.json';
 
 
 export function App() {
-  // const [inputValue, setInputValue] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [gsm, setGsm] = useState([]);
   const [parts, setParts] = useState([]);
@@ -41,7 +40,7 @@ export function App() {
     }
     setGsm(
       data.filter(contact =>
-        contact.name.toLowerCase().includes(searchQuery.toLowerCase())
+        contact.name.toLowerCase().indexOf(searchQuery.toLowerCase())
       )
     );
     setParts(
