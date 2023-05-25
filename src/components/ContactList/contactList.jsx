@@ -13,6 +13,7 @@ export function ItemList({ gsm }) {
           let glassCam = Math.ceil(((item.price + 10) * 37.8) / 50) * 50;
           let iphoneRepair = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
           let newIphoneRepair = Math.ceil(((item.price + 40) * 37.8) / 50) * 50;
+          let ICNewIphoneRepair = Math.ceil(((item.price + 50) * 37.8) / 50) * 50;
          
 let newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone XS") ||
  item.name.includes("iPhone XS Max") || item.name.includes("iPhone 11") ||
@@ -242,7 +243,7 @@ let newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone XS"
               </>
             );
           }
-          if (item.name.includes('Динамік')) {
+          if (item.name.toLowerCase().includes('динамік')) {
             return (
               <>
                 <li className="contactsItem" key={item.name}>
@@ -256,7 +257,37 @@ let newIphone = item.name.includes("iPhone X") || item.name.includes("iPhone XS"
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
+                      {item.name.toLowerCase().includes("сітка динаміка")  ? <span className="contactItem">{priceCharge} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                       {newIphone  ? <span className="contactItem">{iphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
+                    </span>
+                    <span>
+                      <span className="contactValue">Наявність:</span>
+                      <span className="contactItem">
+                        {' '}
+                        {item.quantity_in_stock} грн
+                      </span>
+                    </span>
+                    <span className="provider">Provider: GSM</span>
+                  </div>
+                </li>
+              </>
+            );
+          }
+          if (item.name.toLowerCase().includes('мікросхема')) {
+            return (
+              <>
+                <li className="contactsItem" key={item.name}>
+                  <div className="contact">
+                    <span>
+                      <img src={item.image} alt="" width="100" height="100" />
+                    </span>
+                    <span>
+                      <span className="contactValue">Мікросхеми:</span>
+                      <span className="contactItem">{item.name}</span>
+                    </span>
+                    <span>
+                      <span className="contactValue">Ціна:</span>
+                      {newIphone  ? <span className="contactItem">{ICNewIphoneRepair} грн</span> :  <span className="contactItem">{priceCharge} грн</span> }
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>

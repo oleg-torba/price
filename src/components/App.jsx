@@ -16,7 +16,6 @@ export function App() {
   const [gsm, setGsm] = useState([]);
   const [parts, setParts] = useState([]);
   const [filter, setFilter] = useState([]);
-
   gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
   parts.sort((a, b) => (a.name > b.name ? 1 : -1));
   const data = Data.shop.items.item;
@@ -33,7 +32,10 @@ export function App() {
  const flat = gsm.filter(i=> i.name.includes("Шлейф"))
  const touch = gsm.filter(i=> i.name.includes("Тачскрін"))
  const corps = gsm.filter(i=> i.name.includes("Корпус"))
- console.log(speaker)
+  const ic = gsm.filter(i=> i.name.includes("Мікросхема"))
+
+
+ 
 
   useEffect(() => {
     if (searchQuery === '') {
@@ -56,6 +58,7 @@ export function App() {
     }
   
   };
+
   function formSubmit(query) {
     if (query === searchQuery) {
       alert('Змініть пошуковий запит');
@@ -72,7 +75,6 @@ export function App() {
     <Section>
         <Header onSubmit={formSubmit} />
       </Section>
-
       {gsm.length > 0 && (
         <Section
           title=<p>
@@ -116,6 +118,11 @@ export function App() {
             <li>
               <button name="Корпус" onClick={filterChange}>
                 Корпус: ({corps.length})
+              </button>
+            </li>
+             <li>
+              <button name="Мікросхема" onClick={filterChange}>
+                Контролери\IC: ({ic.length})
               </button>
             </li>
             <li>
