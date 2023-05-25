@@ -11,7 +11,7 @@ export function Form ({onSubmit}) {
       const handleSubmit = e => {
         e.preventDefault();
         if (searchQuery === '') {
-          return;
+          return
         }
         onSubmit(searchQuery);
       };

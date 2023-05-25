@@ -10,7 +10,6 @@ import { Section } from './Section/section';
 import Data from './apiData.json';
 import Parts from './1000parts.json';
 
-
 export function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [gsm, setGsm] = useState([]);
@@ -22,28 +21,27 @@ export function App() {
   const partList = Parts.yml_catalog.shop.offers.offer;
   const totalItems = gsm.length + parts.length;
 
- const battery = gsm.filter(i=> i.name.includes("Акумулятор"))
- const lcd = gsm.filter(i=> i.name.includes("Дисплей"))
- const buzzer = gsm.filter(i=> i.name.toLowerCase().includes("бузер"))
- const backCover = gsm.filter(i=> i.name.includes("Задня") || i.name.includes("Кришка"))
- const camera = gsm.filter(i=> i.name.includes("Камера"))
- const charge = gsm.filter(i=> i.name.includes("Роз'єм"))
- const speaker = gsm.filter(i=> i.name.toLowerCase().includes("динамік"))
- const flat = gsm.filter(i=> i.name.includes("Шлейф"))
- const touch = gsm.filter(i=> i.name.includes("Тачскрін"))
- const corps = gsm.filter(i=> i.name.includes("Корпус"))
-  const ic = gsm.filter(i=> i.name.includes("Мікросхема"))
-
-
- 
+  const battery = gsm.filter(i => i.name.includes('Акумулятор'));
+  const lcd = gsm.filter(i => i.name.includes('Дисплей'));
+  const buzzer = gsm.filter(i => i.name.toLowerCase().includes('бузер'));
+  const backCover = gsm.filter(
+    i => i.name.includes('Задня') || i.name.includes('Кришка')
+  );
+  const camera = gsm.filter(i => i.name.includes('Камера'));
+  const charge = gsm.filter(i => i.name.includes("Роз'єм"));
+  const speaker = gsm.filter(i => i.name.toLowerCase().includes('динамік'));
+  const flat = gsm.filter(i => i.name.includes('Шлейф'));
+  const touch = gsm.filter(i => i.name.includes('Тачскрін'));
+  const corps = gsm.filter(i => i.name.includes('Корпус'));
+  const ic = gsm.filter(i => i.name.includes('Мікросхема'));
 
   useEffect(() => {
     if (searchQuery === '') {
       return;
     }
     setGsm(
-      data.filter(contact =>
-        contact.name.toLowerCase().includes(searchQuery.toLowerCase())
+      data.filter(data =>
+        data.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
     setParts(
@@ -54,9 +52,12 @@ export function App() {
   }, [data, partList, searchQuery]);
   const filterChange = e => {
     if (gsm.length > 1) {
-      setFilter(gsm.filter(data => data.name.toLowerCase().includes(e.target.name.toLowerCase())));
+      setFilter(
+        gsm.filter(data =>
+          data.name.toLowerCase().includes(e.target.name.toLowerCase())
+        )
+      );
     }
-  
   };
 
   function formSubmit(query) {
@@ -71,103 +72,95 @@ export function App() {
 
   return (
     <>
-    <div className='container'>
-    <Section>
-        <Header onSubmit={formSubmit} />
-      </Section>
-      {gsm.length > 0 && (
-        <Section
-          title=<p>
-            За запитом "{searchQuery}" ми знайшли {totalItems} позицій
-          </p>
-        
-        >
-          <div className='itemBlock'>
-<div>
-          
-      
-          <ul className="FilterButton">
-            <li>
-              <button name="Акумулятор" onClick={filterChange}>
-                Акумулятори: ({battery.length})
-              </button>
-            </li>
-            <li>
-              <button name="Бузер" onClick={filterChange}>
-                Бузери: ({buzzer.length})
-              </button>
-            </li>
-
-            <li>
-              <button name="Дисплей" onClick={filterChange}>
-                Дисплеї: ({lcd.length})
-              </button>
-            </li>
-
-            <li>
-              <button name="Задня" onClick={filterChange}>
-                Задні кришки: ({backCover.length})
-              </button>
-            </li>
-
-            <li>
-              <button name="Камера" onClick={filterChange}>
-                Камери: ({camera.length})
-              </button>
-            </li>
-            <li>
-              <button name="Корпус" onClick={filterChange}>
-                Корпус: ({corps.length})
-              </button>
-            </li>
-             <li>
-              <button name="Мікросхема" onClick={filterChange}>
-                Контролери\IC: ({ic.length})
-              </button>
-            </li>
-            <li>
-              <button name="Роз'єм" onClick={filterChange}>
-                Роз'єми: ({charge.length})
-              </button>
-            </li>
-            <li>
-              <button name="Динамік" onClick={filterChange}>
-                Спікери: ({speaker.length})
-              </button>
-            </li>
-            <li>
-              <button name="Тачскрін" onClick={filterChange}>
-                Сенсори: ({touch.length})
-              </button>
-            </li>
-            <li>
-              <button name="Шлейф" onClick={filterChange}>
-                Шлейфи: ({flat.length})
-              </button>
-            </li>
-          </ul>
-          
-            </div>
-         <div className='items'>
-          {filter.length > 0 && (
-            
-              <ItemList gsm={filter} />
-          
-          )}
-           <ApiPartsList parts={parts} />
-           {filter.length < 1 && <ItemList gsm={gsm} onClick={filterChange} />}
-         </div>
-          </div>
-          
+      <div className="container">
+        <Section>
+          <Header onSubmit={formSubmit} />
         </Section>
-      )}
+        {gsm.length > 0 && (
+          <Section
+            title=<p>
+              За запитом "{searchQuery}" ми знайшли {totalItems} позицій
+            </p>
+          >
+            <div className="itemBlock">
+              <div>
+                <ul className="FilterButton">
+                  <li>
+                    <button name="Акумулятор" onClick={filterChange}>
+                      Акумулятори: ({battery.length})
+                    </button>
+                  </li>
+                  <li>
+                    <button name="Бузер" onClick={filterChange}>
+                      Бузери: ({buzzer.length})
+                    </button>
+                  </li>
 
-      <Section title=<p>Відгуки про нас (згодом)</p>></Section>
-      <Section title=<p>Доступні сервісні центри</p>>
-        <ServiceList />
-      </Section>
-    </div>
-      
+                  <li>
+                    <button name="Дисплей" onClick={filterChange}>
+                      Дисплеї: ({lcd.length})
+                    </button>
+                  </li>
+
+                  <li>
+                    <button name="Задня" onClick={filterChange}>
+                      Задні кришки: ({backCover.length})
+                    </button>
+                  </li>
+
+                  <li>
+                    <button name="Камера" onClick={filterChange}>
+                      Камери: ({camera.length})
+                    </button>
+                  </li>
+                  <li>
+                    <button name="Корпус" onClick={filterChange}>
+                      Корпус: ({corps.length})
+                    </button>
+                  </li>
+                  <li>
+                    <button name="Мікросхема" onClick={filterChange}>
+                      Контролери\IC: ({ic.length})
+                    </button>
+                  </li>
+                  <li>
+                    <button name="Роз'єм" onClick={filterChange}>
+                      Роз'єми: ({charge.length})
+                    </button>
+                  </li>
+                  <li>
+                    <button name="Динамік" onClick={filterChange}>
+                      Спікери: ({speaker.length})
+                    </button>
+                  </li>
+                  <li>
+                    <button name="Тачскрін" onClick={filterChange}>
+                      Сенсори: ({touch.length})
+                    </button>
+                  </li>
+                  <li>
+                    <button name="Шлейф" onClick={filterChange}>
+                      Шлейфи: ({flat.length})
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div className="items">
+                {filter.length > 0 && <ItemList gsm={filter} />}
+                <ApiPartsList parts={parts} />
+                {filter.length < 1 && (
+                  <ItemList gsm={gsm} onClick={filterChange} />
+                )}
+              </div>
+            </div>
+          </Section>
+        )}
+
+        <Section title=<p>Відгуки про нас (згодом)</p>></Section>
+        <Section title=<p>Доступні сервісні центри</p>>
+          <ServiceList />
+        </Section>
+      </div>
     </>
   );
 }
