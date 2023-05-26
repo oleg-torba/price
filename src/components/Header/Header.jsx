@@ -1,4 +1,6 @@
-import { BsTelephone } from 'react-icons/bs';
+import { BsTelephone, BsFillSunFill} from 'react-icons/bs';
+import { WiMoonWaxingCrescent5 } from "react-icons/wi"
+
 import { useState } from 'react';
 export function Header({ onSubmit, theme, onChangeTheme }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -17,13 +19,14 @@ export function Header({ onSubmit, theme, onChangeTheme }) {
       <header className="header">
       <div class="theme">
         
-        <p class="theme-icon-light">Light</p>
+     
 
         <div class="switch">
-            {theme === 'dark-theme' ? <span className="checkboxActive" onClick={onChangeTheme}></span> : <span className="checkbox" onClick={onChangeTheme}></span>}
+            {theme === 'dark-theme' ? <span className="checkboxActive" onClick={onChangeTheme}> <BsFillSunFill className='theme-icon-light'/></span> : <span className="checkbox" onClick={onChangeTheme}>
+            <WiMoonWaxingCrescent5 className='theme-icon-dark'/>
+           </span>}
             {theme === 'dark-theme' ? <span className="slideractive" onClick={onChangeTheme}></span> : <span className="slider" onClick={onChangeTheme}></span>}
         </div>
-        <p class="theme-icon-dark">Dark</p>
       </div>
         <form className="form" onSubmit={handleSubmit}>
           <input

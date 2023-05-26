@@ -84,7 +84,7 @@ export function App() {
         </Section>
         {gsm.length > 0 && (
           <Section
-            title=<p>
+            title=<p className='title'>
               За запитом "{searchQuery}" ми знайшли {totalItems} позицій
             </p>
           >
@@ -162,17 +162,17 @@ export function App() {
           </Section>
         )}
 
-        <Section title=<p>Відгуки про нас (згодом)</p>></Section>
-        <Section title=<p>Доступні сервісні центри</p>>
+        <Section title=<p className='title'>Відгуки про нас (згодом)</p>></Section>
+        <Section title=<p className='title'>Доступні сервісні центри</p>>
           <ServiceList />
         </Section>
-      </div> :  <div className="container">
+      </div> :  <div className="container light-theme">
       <Section>
       <Header onSubmit={formSubmit} theme={theme} onChangeTheme={onChangeTheme}/>
       </Section>
       {gsm.length > 0 && (
         <Section
-          title=<p>
+        title=<p className='title'>
             За запитом "{searchQuery}" ми знайшли {totalItems} позицій
           </p>
         >
