@@ -1,5 +1,5 @@
 import { BsTelephone, BsFillSunFill} from 'react-icons/bs';
-import { WiMoonWaxingCrescent5 } from "react-icons/wi"
+import { WiMoonWaxingCrescent1 } from "react-icons/wi"
 
 import { useState } from 'react';
 export function Header({ onSubmit, theme, onChangeTheme }) {
@@ -22,8 +22,9 @@ export function Header({ onSubmit, theme, onChangeTheme }) {
      
 
         <div class="switch">
-            {theme === 'dark-theme' ? <span className="checkboxActive" onClick={onChangeTheme}> <BsFillSunFill className='theme-icon-light'/></span> : <span className="checkbox" onClick={onChangeTheme}>
-            <WiMoonWaxingCrescent5 className='theme-icon-dark'/>
+            {theme === 'dark-theme' ? <span className="checkboxActive" onClick={onChangeTheme}><WiMoonWaxingCrescent1 className='theme-icon-dark'/>
+           </span> : <span className="checkbox" onClick={onChangeTheme}>
+           <BsFillSunFill className='theme-icon-light'/>
            </span>}
             {theme === 'dark-theme' ? <span className="slideractive" onClick={onChangeTheme}></span> : <span className="slider" onClick={onChangeTheme}></span>}
         </div>

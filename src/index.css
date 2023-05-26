@@ -148,16 +148,16 @@ p {
      top: 0;
      bottom: 0;
      margin: auto 0;
-     left: 5%;
-     color: yellow
+     right: 5%;
+     color: blue
    }
    .theme-icon-dark {
     position: absolute;
      top: 0;
      bottom: 0;
      margin: auto 0;
-     right: 5%;
-     color: black
+     left: 5%;
+     fill: yellow
    }
   .dark-theme {
     background-color: #2e2e2e;
