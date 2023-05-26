@@ -192,6 +192,9 @@ p {
    .serviceList{
     outline: 1px solid grey;
    }
+   .phone{
+    color: grey;
+   }
   }
 
  
