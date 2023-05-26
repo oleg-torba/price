@@ -182,6 +182,7 @@ p {
     .formInput{
       background-color: #2e2e2e;
       border-color: grey;
+      color: white;
     }
    ::placeholder {
     color: white;
