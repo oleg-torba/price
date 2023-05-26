@@ -98,6 +98,7 @@ p {
     border-radius: 20px;
     border: 0.604701px solid #4b48db;
     transition: 0.5s;
+    background-color: yellow;
   }
 
   .slider {
