@@ -98,7 +98,8 @@ p {
     border-radius: 20px;
     border: 0.604701px solid #4b48db;
     transition: 0.5s;
-    background-color: yellow;
+    background-color: blue;
+    
   }
 
   .slider {
@@ -111,7 +112,7 @@ p {
  
     width: 16px;
     height: 16px;
-    background-color: #4b48db;
+ background-color: #fff;
     transition: var(--animation);
     border-radius: 50%;
     transition: 0.5s;
@@ -133,7 +134,7 @@ p {
   }
   .checkboxActive {
     display: block;
-    background-color: #4b48db;
+    background-color: darkslategrey;
     width: 40px;
     height: 20px;
     border-radius: 20px;
@@ -150,7 +151,7 @@ p {
      bottom: 0;
      margin: auto 0;
      right: 5%;
-     color: blue
+     color: yellow
    }
    .theme-icon-dark {
     position: absolute;
@@ -172,13 +173,25 @@ p {
     }
    
   
-    .serviceList, .contactItem, .title{
+    .serviceList, .contactItem, .title, .provider{
       color: white;
     }
     .contactValue {
       color: green;
     }
-   
+    .formInput{
+      background-color: #2e2e2e;
+      border-color: grey;
+    }
+   ::placeholder {
+    color: white;
+   }
+   .telegramIcon{
+    color: white;
+   }
+   .serviceList{
+    outline: 1px solid grey;
+   }
   }
 
  

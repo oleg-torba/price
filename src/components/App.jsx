@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
-
+import { UseLocalStorage } from 'hooks/useLocalStorage';
 import { ApiPartsList } from './Api1000Parts/Api1000Parts';
 import { Header } from './Header/Header';
 
@@ -21,7 +21,7 @@ export function App() {
   const partList = Parts.yml_catalog.shop.offers.offer;
   const totalItems = gsm.length + parts.length;
 
-  const [theme, setTheme] = useState('light-theme')
+  const [theme, setTheme] = UseLocalStorage('theme', '');
 
   const battery = gsm.filter(i => i.name.includes('Акумулятор'));
   const lcd = gsm.filter(i => i.name.includes('Дисплей'));

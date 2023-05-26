@@ -10,7 +10,7 @@ export function ServiceList() {
           <p>
             098-188-28-58{' '}
             <a classname="serviceLink" href="https://t.me/+TuRc4zxZnPZxh3vI">
-              <FaTelegram RiTelegramLine />
+              <FaTelegram RiTelegramLine className='telegramIcon'/>
             </a>
           </p>
         </li>
@@ -19,7 +19,7 @@ export function ServiceList() {
           <p>
             067-691-78-27{' '}
             <a href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink">
-              <FaTelegram RiTelegramLine />
+              <FaTelegram RiTelegramLine className='telegramIcon'/>
             </a>
           </p>
         </li>
@@ -29,7 +29,7 @@ export function ServiceList() {
           <p>
             067-862-99-19{' '}
             <a href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink">
-              <FaTelegram RiTelegramLine />
+              <FaTelegram RiTelegramLine className='telegramIcon'/>
             </a>
           </p>
         </li>
@@ -38,7 +38,7 @@ export function ServiceList() {
           <p>
             098-188-28-49{' '}
             <a href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink">
-              <FaTelegram RiTelegramLine />
+              <FaTelegram RiTelegramLine className='telegramIcon'/>
             </a>
           </p>
         </li>
@@ -47,7 +47,7 @@ export function ServiceList() {
           <p>
             097-365-28-42{' '}
             <a href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink">
-              <FaTelegram RiTelegramLine />
+              <FaTelegram RiTelegramLine className='telegramIcon'/>
             </a>
           </p>
         </li>
@@ -56,7 +56,7 @@ export function ServiceList() {
           <p>
             067-439-46-79{' '}
             <a href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink">
-              <FaTelegram RiTelegramLine />
+              <FaTelegram RiTelegramLine className='telegramIcon'/>
             </a>
           </p>
         </li>
@@ -65,7 +65,7 @@ export function ServiceList() {
           <p>
             068-588-29-28{' '}
             <a href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink">
-              <FaTelegram RiTelegramLine />
+              <FaTelegram RiTelegramLine className='telegramIcon'/>
             </a>
           </p>
         </li>
@@ -74,7 +74,7 @@ export function ServiceList() {
           <p>
             067-671-49-38{' '}
             <a href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink">
-              <FaTelegram RiTelegramLine />
+              <FaTelegram RiTelegramLine className='telegramIcon'/>
             </a>
           </p>
         </li>
@@ -83,7 +83,7 @@ export function ServiceList() {
           <p>
             067-746-03-90{' '}
             <a href="https://t.me/+TuRc4zxZnPZxh3vI" classname="serviceLink">
-              <FaTelegram RiTelegramLine />
+              <FaTelegram RiTelegramLine className='telegramIcon'/>
             </a>
           </p>
         </li>
