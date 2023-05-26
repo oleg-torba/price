@@ -1,5 +1,4 @@
 import { BsTelephone } from 'react-icons/bs';
-import { ThemeChanger } from 'components/Theme/Theme';
 import { useState } from 'react';
 export function Header({ onSubmit, theme, onChangeTheme }) {
   const [searchQuery, setSearchQuery] = useState('');
