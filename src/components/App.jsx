@@ -21,6 +21,8 @@ export function App() {
   const partList = Parts.yml_catalog.shop.offers.offer;
   const totalItems = gsm.length + parts.length;
 
+  const [theme, setTheme] = useState('light-theme')
+
   const battery = gsm.filter(i => i.name.includes('Акумулятор'));
   const lcd = gsm.filter(i => i.name.includes('Дисплей'));
   const buzzer = gsm.filter(i => i.name.toLowerCase().includes('бузер'));
@@ -50,6 +52,9 @@ export function App() {
       )
     );
   }, [data, partList, searchQuery]);
+  const onChangeTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'dark-theme' ? 'light-theme': 'dark-theme'))
+}
   const filterChange = e => {
     if (gsm.length > 1) {
       setFilter(
@@ -72,9 +77,10 @@ export function App() {
 
   return (
     <>
-      <div className="container">
+     {theme === 'dark-theme' ?  <div className="container dark-theme">
         <Section>
-          <Header onSubmit={formSubmit} />
+        
+          <Header onSubmit={formSubmit} theme={theme} onChangeTheme={onChangeTheme}/>
         </Section>
         {gsm.length > 0 && (
           <Section
@@ -86,60 +92,60 @@ export function App() {
               <div>
                 <ul className="FilterButton">
                   <li>
-                    <button name="Акумулятор" onClick={filterChange}>
+                    <button className="formBtn" name="Акумулятор" onClick={filterChange}>
                       Акумулятори: ({battery.length})
                     </button>
                   </li>
                   <li>
-                    <button name="Бузер" onClick={filterChange}>
+                    <button className="formBtn" name="Бузер" onClick={filterChange}>
                       Бузери: ({buzzer.length})
                     </button>
                   </li>
 
                   <li>
-                    <button name="Дисплей" onClick={filterChange}>
+                    <button className="formBtn" name="Дисплей" onClick={filterChange}>
                       Дисплеї: ({lcd.length})
                     </button>
                   </li>
 
                   <li>
-                    <button name="Задня" onClick={filterChange}>
+                    <button className="formBtn" name="Задня" onClick={filterChange}>
                       Задні кришки: ({backCover.length})
                     </button>
                   </li>
 
                   <li>
-                    <button name="Камера" onClick={filterChange}>
+                    <button className="formBtn" name="Камера" onClick={filterChange}>
                       Камери: ({camera.length})
                     </button>
                   </li>
                   <li>
-                    <button name="Корпус" onClick={filterChange}>
+                    <button className="formBtn" name="Корпус" onClick={filterChange}>
                       Корпус: ({corps.length})
                     </button>
                   </li>
                   <li>
-                    <button name="Мікросхема" onClick={filterChange}>
+                    <button className="formBtn" name="Мікросхема" onClick={filterChange}>
                       Контролери\IC: ({ic.length})
                     </button>
                   </li>
                   <li>
-                    <button name="Роз'єм" onClick={filterChange}>
+                    <button className="formBtn" name="Роз'єм" onClick={filterChange}>
                       Роз'єми: ({charge.length})
                     </button>
                   </li>
                   <li>
-                    <button name="Динамік" onClick={filterChange}>
+                    <button className="formBtn" name="Динамік" onClick={filterChange}>
                       Спікери: ({speaker.length})
                     </button>
                   </li>
                   <li>
-                    <button name="Тачскрін" onClick={filterChange}>
+                    <button className="formBtn" name="Тачскрін" onClick={filterChange}>
                       Сенсори: ({touch.length})
                     </button>
                   </li>
                   <li>
-                    <button name="Шлейф" onClick={filterChange}>
+                    <button className="formBtn" name="Шлейф" onClick={filterChange}>
                       Шлейфи: ({flat.length})
                     </button>
                   </li>
@@ -160,7 +166,95 @@ export function App() {
         <Section title=<p>Доступні сервісні центри</p>>
           <ServiceList />
         </Section>
-      </div>
+      </div> :  <div className="container">
+      <Section>
+      <Header onSubmit={formSubmit} theme={theme} onChangeTheme={onChangeTheme}/>
+      </Section>
+      {gsm.length > 0 && (
+        <Section
+          title=<p>
+            За запитом "{searchQuery}" ми знайшли {totalItems} позицій
+          </p>
+        >
+          <div className="itemBlock">
+            <div>
+              <ul className="FilterButton">
+                <li>
+                  <button className="formBtn" name="Акумулятор" onClick={filterChange}>
+                    Акумулятори: ({battery.length})
+                  </button>
+                </li>
+                <li>
+                  <button name="Бузер" onClick={filterChange} className="formBtn">
+                    Бузери: ({buzzer.length})
+                  </button>
+                </li>
+
+                <li>
+                  <button className="formBtn" name="Дисплей" onClick={filterChange}>
+                    Дисплеї: ({lcd.length})
+                  </button>
+                </li>
+
+                <li>
+                  <button className="formBtn" name="Задня" onClick={filterChange}>
+                    Задні кришки: ({backCover.length})
+                  </button>
+                </li>
+
+                <li>
+                  <button className="formBtn" name="Камера" onClick={filterChange}>
+                    Камери: ({camera.length})
+                  </button>
+                </li>
+                <li>
+                  <button className="formBtn" name="Корпус" onClick={filterChange}>
+                    Корпус: ({corps.length})
+                  </button>
+                </li>
+                <li>
+                  <button className="formBtn" name="Мікросхема" onClick={filterChange}>
+                    Контролери\IC: ({ic.length})
+                  </button>
+                </li>
+                <li>
+                  <button className="formBtn" name="Роз'єм" onClick={filterChange}>
+                    Роз'єми: ({charge.length})
+                  </button>
+                </li>
+                <li>
+                  <button className="formBtn" name="Динамік" onClick={filterChange}>
+                    Спікери: ({speaker.length})
+                  </button>
+                </li>
+                <li>
+                  <button className="formBtn" name="Тачскрін" onClick={filterChange}>
+                    Сенсори: ({touch.length})
+                  </button>
+                </li>
+                <li>
+                  <button className="formBtn" name="Шлейф" onClick={filterChange}>
+                    Шлейфи: ({flat.length})
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div className="items">
+              {filter.length > 0 && <ItemList gsm={filter} />}
+              <ApiPartsList parts={parts} />
+              {filter.length < 1 && (
+                <ItemList gsm={gsm} onClick={filterChange} />
+              )}
+            </div>
+          </div>
+        </Section>
+      )}
+
+      <Section title=<p>Відгуки про нас (згодом)</p>></Section>
+      <Section title=<p>Доступні сервісні центри</p>>
+        <ServiceList />
+      </Section>
+    </div>}
     </>
   );
 }

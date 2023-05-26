@@ -24,7 +24,7 @@ h2 {
   text-align: center;
   margin-bottom: 10px;
 }
-button {
+.formBtn {
   width: 130px;
   background-color: blue;
   outline: none;
@@ -33,6 +33,8 @@ button {
   height: 35px;
   color: aliceblue;
   cursor: pointer;
+
+ 
 }
 .header {
   display: flex;
@@ -74,8 +76,87 @@ p {
     margin-right: 10px;
   }
 }
+.theme {
+  display: flex;
+  align-items: center;
+  
 
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+  
+    width: 40px;
+    height: 20px;
+    margin: 0 8px;
+  }
 
+  .checkbox {
+    display: block;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    border: 0.604701px solid #4b48db;
+    transition: 0.5s;
+  }
+
+  .slider {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+   margin: auto 0;
+ 
+    width: 16px;
+    height: 16px;
+    background-color: #4b48db;
+    transition: var(--animation);
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+  .slideractive {
+    background-color: #ffff;
+  
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+  
+    top: 0;
+    bottom: 0;
+    transform: translateX(20px);
+    margin: auto 0;
+    width: 16px;
+    height: 16px;
+    transition: 0.5s;
+  }
+  .checkboxActive {
+    display: block;
+    background-color: #4b48db;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    border: 0.604701px solid #ffff;
+    transition: 0.5s;
+  }
+
+  .dark-theme {
+    background-color: #2e2e2e;
+    .formBtn{
+      background-color: green;
+    }
+    .theme-icon-dark{
+      color: blue;
+    }
+    .theme-icon-light{
+      color:grey
+    }
+  }
+
+  .theme-icon-light{
+    color: blue;
+  }
+  
 .contactsList {
   display: flex;
 
@@ -134,17 +215,17 @@ li {
         width: 100%;}
    
    
-   @media screen and (min-width:480px) {
+   /* @media screen and (min-width:480px) {
        width: 480px;
    }
    
    @media screen and (min-width:768px) and (max-width:1199px) {
-       width: 768px;
+       width: 968px;
    }
    
-   @media screen and (min-width: 1024px) {
+   @media screen and (min-width: 968px) {
        width: 1200px;
-   }
+   } */
 }
 @media screen and (max-width: 580px) {
   input, select {
@@ -159,9 +240,16 @@ li {
     right: 0;
     padding: 5px;
   }
+  .theme {
+    position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  }
   .formInput{
     margin: 10px 0;
   }
+
   
 }
 .section {

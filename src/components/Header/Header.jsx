@@ -1,7 +1,7 @@
 import { BsTelephone } from 'react-icons/bs';
-
+import { ThemeChanger } from 'components/Theme/Theme';
 import { useState } from 'react';
-export function Header({ onSubmit }) {
+export function Header({ onSubmit, theme, onChangeTheme }) {
   const [searchQuery, setSearchQuery] = useState('');
   const handleChange = e => {
     setSearchQuery(e.currentTarget.value.toLowerCase());
@@ -16,6 +16,16 @@ export function Header({ onSubmit }) {
   return (
     <>
       <header className="header">
+      <div class="theme">
+        
+        <p class="theme-icon-light">Light</p>
+
+        <div class="switch">
+            {theme === 'dark-theme' ? <span className="checkboxActive" onClick={onChangeTheme}></span> : <span className="checkbox" onClick={onChangeTheme}></span>}
+            {theme === 'dark-theme' ? <span className="slideractive" onClick={onChangeTheme}></span> : <span className="slider" onClick={onChangeTheme}></span>}
+        </div>
+        <p class="theme-icon-dark">Dark</p>
+      </div>
         <form className="form" onSubmit={handleSubmit}>
           <input
             className="formInput"
