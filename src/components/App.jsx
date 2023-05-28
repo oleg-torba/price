@@ -4,7 +4,7 @@ import { ServiceList } from './Servicelist/ServiceList';
 import { UseLocalStorage } from 'hooks/useLocalStorage';
 import { ApiPartsList } from './Api1000Parts/Api1000Parts';
 import { Header } from './Header/Header';
-
+import { Promo } from './Promo/Promo';
 import { Section } from './Section/section';
 
 import Data from './apiData.json';
@@ -82,6 +82,11 @@ export function App() {
         
           <Header onSubmit={formSubmit} theme={theme} onChangeTheme={onChangeTheme}/>
         </Section>
+        {gsm.length < 1&& (
+           <Section>
+           <Promo promoParts = {data}/>
+                   </Section>
+      )}
         {gsm.length > 0 && (
           <Section
             title=<p className='title'>
@@ -161,8 +166,7 @@ export function App() {
             </div>
           </Section>
         )}
-
-        <Section title=<p className='title'>Відгуки про нас (згодом)</p>></Section>
+     
         <Section title=<p className='title'>Доступні сервісні центри</p>>
           <ServiceList />
         </Section>
@@ -170,6 +174,11 @@ export function App() {
       <Section>
       <Header onSubmit={formSubmit} theme={theme} onChangeTheme={onChangeTheme}/>
       </Section>
+      {gsm.length < 1&& (
+           <Section>
+           <Promo promoParts = {data}/>
+                   </Section>
+      )}
       {gsm.length > 0 && (
         <Section
         title=<p className='title'>
@@ -249,8 +258,6 @@ export function App() {
           </div>
         </Section>
       )}
-
-      <Section title=<p>Відгуки про нас (згодом)</p>></Section>
       <Section title=<p>Доступні сервісні центри</p>>
         <ServiceList />
       </Section>

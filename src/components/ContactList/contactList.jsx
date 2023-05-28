@@ -5,13 +5,14 @@ export function ItemList({ gsm }) {
     <>
       <ul className="contactsList">
         {gsm.map(item => {
-          let priceLCD = Math.ceil(((item.price + 20) * 37.8) / 50) * 50;
-          let priceCharge = Math.ceil(((item.price + 10) * 37.8) / 50) * 50;
-          let glassCam = Math.ceil(((item.price + 10) * 37.8) / 50) * 50;
-          let iphoneRepair = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
-          let newIphoneRepair = Math.ceil(((item.price + 40) * 37.8) / 50) * 50;
+          let priceLCD = Math.ceil(((item.price + 20) * 39) / 50) * 50;
+          let priceCharge = Math.ceil(((item.price + 10) * 39) / 50) * 50;
+          let glassCam = Math.ceil(((item.price + 10) * 39) / 50) * 50;
+          let promoPrice = Math.ceil(((item.price + 17) * 39) / 50) * 50;
+          let iphoneRepair = Math.ceil(((item.price + 30) * 39) / 50) * 50;
+          let newIphoneRepair = Math.ceil(((item.price + 40) * 39) / 50) * 50;
           let ICNewIphoneRepair =
-            Math.ceil(((item.price + 50) * 37.8) / 50) * 50;
+            Math.ceil(((item.price + 50) * 39) / 50) * 50;
 
           let newIphone =
             item.name.includes('iPhone X') ||
@@ -29,11 +30,11 @@ export function ItemList({ gsm }) {
             item.name.includes('iPhone 13');
 
           if (item.price >= 25) {
-            priceLCD = Math.ceil(((item.price + 25) * 37.8) / 50) * 50;
+            priceLCD = Math.ceil(((item.price + 25) * 39) / 50) * 50;
           }
           if (item.price >= 60) {
             // eslint-disable-next-line no-unused-vars
-            priceLCD = Math.ceil(((item.price + 30) * 37.8) / 50) * 50;
+            priceLCD = Math.ceil(((item.price + 30) * 39) / 50) * 50;
           }
 
           if (item.name.includes('Дисплей') || item.name.includes('Complete')) {
@@ -50,11 +51,14 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      {newIphone ? (
+                      {newIphone && (
                         <span className="contactItem">{iphoneRepair} грн</span>
-                      ) : (
-                        <span className="contactItem">{priceLCD} грн</span>
-                      )}
+                      ) }
+                      {item.vendorCode === 'CB-00008428' || item.vendorCode === 'CB-00012256' || item.vendorCode === 'CB-00012222' ?
+                       <b className="contactItem">{promoPrice} грн</b> : <span className="contactItem">{priceLCD} грн</span>
+                    
+                       }
+                         
                     </span>
                     <span>
                       <span className="contactValue">Наявність:</span>
