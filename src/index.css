@@ -435,14 +435,18 @@ a {
   border: 1px solid lightgray;
   padding: 10px;
   text-align: center;
+
  
 }
 
 .promoItem{
   display: flex;
 flex-wrap: wrap; 
-justify-content: center; @media screen and (max-width:768px) {
+
+justify-content: center;
+ @media screen and (max-width:768px) {
     flex-direction: column;
+    flex-wrap: nowrap
   }
 }
 
