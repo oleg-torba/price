@@ -221,6 +221,9 @@ p {
   border-radius: 4px;
   margin-bottom: 10px;
   padding: 10px;
+  @media screen and (max-width:768px) {
+   width:inherit;
+  }
 }
 
 .contactValue {
@@ -435,8 +438,7 @@ a {
   border: 1px solid lightgray;
   padding: 10px;
   text-align: center;
-
- 
+  
 }
 
 .promoItem{
