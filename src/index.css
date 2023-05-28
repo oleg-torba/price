@@ -221,6 +221,7 @@ p {
   border: 1.5px solid lightgray;
   border-radius: 4px;
   margin-bottom: 10px;
+  padding: 5px;
   @media screen and (max-width:768px) {
    width:250px;
   }
@@ -447,7 +448,10 @@ a {
   justify-content: center;
   align-items: center;
  @media screen and (max-width:768px) {
-  display: block;
+  display: flex;
+  flex-wrap:nowrap;
+  flex-direction: column;
+  justify-content: center;
   }
 }
 
