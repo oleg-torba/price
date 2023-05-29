@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Data from '../apiData.json';
+import Timer from './Timer/Timer'
 export function Promo ({promoParts}) {
 
     const data = Data.shop.items.item;
@@ -13,7 +14,10 @@ export function Promo ({promoParts}) {
     return (
         
         <div className="promoBlock">
-        <p className="titlePromo">SALE SALE SALE (04.06.2023)</p>
+         <div className="promoHead">
+         <p className="promoTitle">Sale -10%</p>
+      <Timer/>
+         </div>
         <ul className="promoItem">
             {promo.map(item => {
                 const currentPrice = Math.ceil(((item.price + 20) * 39) / 50) * 50;

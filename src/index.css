@@ -455,8 +455,31 @@ a {
   }
 }
 
-.titlePromo {
+.promoTitle {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+
+.timer{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.box{
   color: red;
   font-weight: bold;
-  margin: 10px 0;
+  font-size: 18px;
 }
+.promoHead {
+  display: flex;
+ margin: 10px 0;
+ @media screen and (max-width:768px) {
+  display: block;
+  .promoTitle{
+    margin-bottom: 5px;
+  }
+ }
+}
+
