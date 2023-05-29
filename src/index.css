@@ -166,7 +166,9 @@ p {
   .dark-theme {
     background-color: #2e2e2e;
   transition: 0.5s;
-
+.text{
+  color: orange;
+}
     .formBtn {
       background-color: green;
     }
