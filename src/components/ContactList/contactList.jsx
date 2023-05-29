@@ -51,13 +51,15 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      {newIphone && (
-                        <span className="contactItem">{iphoneRepair} грн</span>
-                      ) }
-                      {item.vendorCode === 'CB-00008428' || item.vendorCode === 'CB-00012256' || item.vendorCode === 'CB-00012222' ?
-                       <b className="contactItem">{promoPrice} грн</b> : <span className="contactItem">{priceLCD} грн</span>
-                    
+               
+                      {newIphone ?
+                         <span className="contactItem">{iphoneRepair} грн</span> :
+                         <span className="contactItem">{priceLCD} грн</span>
+                       
                        }
+                      {/* {item.vendorCode === 'CB-00008428' || item.vendorCode === 'CB-00012256' || item.vendorCode === 'CB-00012222' && (  
+                           <b className="contactItem">{promoPrice} грн</b>  )
+                           } */}
                          
                     </span>
                     <span>
