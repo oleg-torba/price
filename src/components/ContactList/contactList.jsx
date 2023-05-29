@@ -8,7 +8,7 @@ export function ItemList({ gsm }) {
           let priceLCD = Math.ceil(((item.price + 20) * 39) / 50) * 50;
           let priceCharge = Math.ceil(((item.price + 10) * 39) / 50) * 50;
           let glassCam = Math.ceil(((item.price + 10) * 39) / 50) * 50;
-          let promoPrice = Math.ceil(((item.price + 17) * 39) / 50) * 50;
+          // let promoPrice = Math.ceil(((item.price + 17) * 39) / 50) * 50;
           let iphoneRepair = Math.ceil(((item.price + 30) * 39) / 50) * 50;
           let newIphoneRepair = Math.ceil(((item.price + 40) * 39) / 50) * 50;
           let ICNewIphoneRepair =
