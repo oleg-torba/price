@@ -195,7 +195,7 @@ export function App() {
                         name="Скло камери"
                         onClick={filterChange}
                       >
-                        Скло камери: ({backCover.length})
+                        Скло камери: ({cameraGlass.length})
                       </button>
                     </li>
                     <li>
