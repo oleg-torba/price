@@ -5,7 +5,7 @@ export function ItemList({ gsm }) {
     <>
       <ul className="contactsList">
         {gsm.map(item => {
-          let priceLCD = Math.ceil(((item.price + 20) * 39) / 50) * 50;
+          let priceLCD = Math.ceil(((item.price + 22) * 39) / 50) * 50;
           let priceCharge = Math.ceil(((item.price + 10) * 39) / 50) * 50;
           let glassCam = Math.ceil(((item.price + 10) * 39) / 50) * 50;
           // let promoPrice = Math.ceil(((item.price + 17) * 39) / 50) * 50;
@@ -256,7 +256,7 @@ export function ItemList({ gsm }) {
                       <img src={item.image} alt="" width="100" height="100" />
                     </span>
                     <span>
-                      <span className="contactValue">Бузера:</span>
+                      <span className="contactValue">Бузер:</span>
                       <span className="contactItem"> {item.name}</span>
                     </span>
                     <span>
@@ -294,11 +294,7 @@ export function ItemList({ gsm }) {
                     </span>
                     <span>
                       <span className="contactValue">Ціна:</span>
-                      {item.name.toLowerCase().includes('сітка динаміка') ? (
-                        <span className="contactItem">{priceCharge} грн</span>
-                      ) : (
-                        <span className="contactItem">{priceCharge} грн</span>
-                      )}
+                     
                       {newIphone ? (
                         <span className="contactItem">{iphoneRepair} грн</span>
                       ) : (
