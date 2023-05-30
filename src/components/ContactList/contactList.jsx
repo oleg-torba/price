@@ -147,7 +147,7 @@ export function ItemList({ gsm }) {
             );
           }
           if (
-            item.name.includes('Задня') ||
+            item.name.includes('Задня частина') ||
             item.name.includes('Кришка задня')
           ) {
             return (

@@ -27,7 +27,7 @@ export function App() {
   const lcd = gsm.filter(i => i.name.includes('Дисплей'));
   const buzzer = gsm.filter(i => i.name.toLowerCase().includes('бузер'));
   const backCover = gsm.filter(
-    i => i.name.includes('Задня') || i.name.includes('Кришка')
+    i => i.name.includes('Задня частина') || i.name.includes('Кришка')
   );
   const camera = gsm.filter(i => i.name.includes('Камера'));
   const charge = gsm.filter(i => i.name.includes("Роз'єм"));
@@ -36,6 +36,7 @@ export function App() {
   const touch = gsm.filter(i => i.name.includes('Тачскрін'));
   const corps = gsm.filter(i => i.name.includes('Корпус'));
   const ic = gsm.filter(i => i.name.includes('Мікросхема'));
+  const cameraGlass = gsm.filter(i => i.name.includes('Скло камери'));
 
   useEffect(() => {
     if (searchQuery === '') {
@@ -89,9 +90,11 @@ export function App() {
             />
           </Section>
 
-          <Section>
-            <Promo promoParts={data} />
-          </Section>
+         {gsm.length <1 && (
+           <Section>
+           <Promo promoParts={data} />
+         </Section>
+         )}
 
           {gsm.length > 0 && (
             <Section
@@ -189,6 +192,15 @@ export function App() {
                     <li>
                       <button
                         className="formBtn"
+                        name="Скло камери"
+                        onClick={filterChange}
+                      >
+                        Скло камери: ({backCover.length})
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="formBtn"
                         name="Тачскрін"
                         onClick={filterChange}
                       >
@@ -230,10 +242,11 @@ export function App() {
               onChangeTheme={onChangeTheme}
             />
           </Section>
-
-          <Section>
-            <Promo promoParts={data} />
-          </Section>
+          {gsm.length < 1 && (
+            <Section>
+              <Promo promoParts={data} />
+            </Section>
+          )}
 
           {gsm.length > 0 && (
             <Section
