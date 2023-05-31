@@ -41,10 +41,10 @@ export function LcdItem({ gsm }) {
         if (item.name.includes('Акумулятор')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />{' '}
-                {item.name}
-              </td>
+              <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{iphoneRepair} грн</td>
               ) : (
@@ -56,10 +56,10 @@ export function LcdItem({ gsm }) {
         if (item.name.includes('Бузер')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+              <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{iphoneRepair} грн</td>
               ) : (
@@ -71,10 +71,10 @@ export function LcdItem({ gsm }) {
         if (item.name.includes('Динамік')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+            <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{iphoneRepair} грн</td>
               ) : (
@@ -86,10 +86,10 @@ export function LcdItem({ gsm }) {
         if (item.name.includes('Дисплей') || item.name.includes('Complete')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+              <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{iphoneRepair} грн</td>
               ) : (
@@ -104,10 +104,10 @@ export function LcdItem({ gsm }) {
         ) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+              <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{iphoneRepair} грн</td>
               ) : (
@@ -119,10 +119,10 @@ export function LcdItem({ gsm }) {
         if (item.name.includes('Камера')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+             <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{newIphoneRepair} грн</td>
               ) : (
@@ -134,10 +134,10 @@ export function LcdItem({ gsm }) {
         if (item.name.includes('Корпус')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+            <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{newIphoneRepair} грн</td>
               ) : (
@@ -149,10 +149,10 @@ export function LcdItem({ gsm }) {
         if (item.name.includes('Скло камери')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+             <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               <td className="tableTitle">{glassCam} грн</td>
             </tr>
           );
@@ -160,10 +160,10 @@ export function LcdItem({ gsm }) {
         if (item.name.includes('Мікросхема')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+              <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{ICNewIphoneRepair} грн</td>
               ) : (
@@ -178,10 +178,10 @@ export function LcdItem({ gsm }) {
         ) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+             <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{iphoneRepair} грн</td>
               ) : (
@@ -193,10 +193,10 @@ export function LcdItem({ gsm }) {
         if (item.name.toLowerCase().includes('тачскрін')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+             <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{iphoneRepair} грн</td>
               ) : (
@@ -208,10 +208,10 @@ export function LcdItem({ gsm }) {
         if (item.name.includes('Шлейф')) {
           return (
             <tr key={item.vendorCode}>
-              <td className="tableTitle">
-                <img src={item.image} alt="" width="50" height="40" />
-                {item.name}
-              </td>
+            <div className="tableItem">
+               <td> <img className='tableImg' src={item.image} alt="" width="50" height="40" />{' '}</td>
+              <td>  {item.name}</td>
+              </div>
               {newIphone ? (
                 <td className="tableTitle">{iphoneRepair} грн</td>
               ) : (

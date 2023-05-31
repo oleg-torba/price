@@ -501,4 +501,24 @@ table{
   border-collapse: collapse;
   border: 1px solid purple;
   min-width: 100%;
+  
+}
+
+.tableItem {
+
+  padding: 10px;
+  font-weight: bold;
+ display: flex;
+ flex-direction: row-reverse;
+ justify-content: space-between;
+ align-items: center;
+  border-bottom: 1px solid purple;
+}
+
+.tableImg {
+ 
+  display: block;
+  margin-bottom: 0;
+  margin-left: 20px;
+
 }
