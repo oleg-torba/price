@@ -172,6 +172,10 @@ p {
 .table {
   border: 1px solid lightgray;
 }
+.tableItem {
+  color: orange;
+  border-bottom: 1px solid lightgray;
+}
 .tableTitle {
   color: orange;
   border: 1px solid lightgray;
@@ -497,7 +501,7 @@ a {
   border: 1px solid purple;
   font-weight: bold;
 }
-table{
+.table{
   border-collapse: collapse;
   border: 1px solid purple;
   min-width: 100%;

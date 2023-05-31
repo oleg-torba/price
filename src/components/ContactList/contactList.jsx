@@ -2,7 +2,7 @@ import React from 'react';
 
 export function LcdItem({ gsm }) {
   return (
-    <table>
+    <table className='table'>
       <tr>
         <th className="tableTitle">Найменування</th>
         <th className="tableTitle">Ціна</th>
