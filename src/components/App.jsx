@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ServiceList } from './Servicelist/ServiceList';
 import { UseLocalStorage } from 'hooks/useLocalStorage';
-import { ApiPartsList } from './Api1000Parts/Api1000Parts';
 import { Header } from './Header/Header';
 import { Promo } from './Promo/Promo';
 import { Section } from './Section/section';
