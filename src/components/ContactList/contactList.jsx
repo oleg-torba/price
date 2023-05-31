@@ -190,7 +190,7 @@ export function LcdItem({ gsm }) {
             </tr>
           );
         }
-        if (item.name.toLowerCase().includes('тачскрін')) {
+        if (item.name.includes('Тачскрін')) {
           return (
             <tr key={item.vendorCode}>
              <div className="tableItem">
