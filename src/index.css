@@ -169,6 +169,13 @@ p {
 .text{
   color: orange;
 }
+.table {
+  border: 1px solid lightgray;
+}
+.tableTitle {
+  color: orange;
+  border: 1px solid lightgray;
+}
     .formBtn {
       background-color: green;
     }
@@ -485,3 +492,13 @@ a {
  }
 }
 
+.tableTitle{
+  padding: 5px;
+  border: 1px solid purple;
+  font-weight: bold;
+}
+table{
+  border-collapse: collapse;
+  border: 1px solid purple;
+  min-width: 100%;
+}

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { ItemList } from './ContactList/contactList';
 import { ServiceList } from './Servicelist/ServiceList';
 import { UseLocalStorage } from 'hooks/useLocalStorage';
 import { ApiPartsList } from './Api1000Parts/Api1000Parts';
 import { Header } from './Header/Header';
 import { Promo } from './Promo/Promo';
 import { Section } from './Section/section';
+import { LcdItem } from './ContactList/contactList';
 
 import Data from './apiData.json';
 import Parts from './1000parts.json';
@@ -13,6 +13,7 @@ import Parts from './1000parts.json';
 export function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [gsm, setGsm] = useState([]);
+  console.log(gsm);
   const [parts, setParts] = useState([]);
   const [filter, setFilter] = useState([]);
   gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
@@ -70,7 +71,7 @@ export function App() {
 
   function formSubmit(query) {
     if (query === searchQuery) {
-      alert('Змініть пошуковий запит');
+      return;
     }
     setSearchQuery(query.toLowerCase());
     setGsm([]);
@@ -90,11 +91,11 @@ export function App() {
             />
           </Section>
 
-         {gsm.length <1 && (
-           <Section>
-           <Promo promoParts={data} />
-         </Section>
-         )}
+          {gsm.length < 1 && (
+            <Section>
+              <Promo promoParts={data} />
+            </Section>
+          )}
 
           {gsm.length > 0 && (
             <Section
@@ -219,10 +220,10 @@ export function App() {
                   </ul>
                 </div>
                 <div className="items">
-                  {filter.length > 0 && <ItemList gsm={filter} />}
-                  <ApiPartsList parts={parts} />
+                  {filter.length > 0 && <LcdItem gsm={filter} />}
+
                   {filter.length < 1 && (
-                    <ItemList gsm={gsm} onClick={filterChange} />
+                    <LcdItem gsm={gsm} onClick={filterChange} />
                   )}
                 </div>
               </div>
@@ -362,10 +363,10 @@ export function App() {
                   </ul>
                 </div>
                 <div className="items">
-                  {filter.length > 0 && <ItemList gsm={filter} />}
-                  <ApiPartsList parts={parts} />
+                  {filter.length > 0 && <LcdItem gsm={filter} />}
+
                   {filter.length < 1 && (
-                    <ItemList gsm={gsm} onClick={filterChange} />
+                    <LcdItem gsm={gsm} onClick={filterChange} />
                   )}
                 </div>
               </div>
