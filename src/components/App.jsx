@@ -344,6 +344,15 @@ export function App() {
                     <li>
                       <button
                         className="formBtn"
+                        name="Скло камери"
+                        onClick={filterChange}
+                      >
+                        Скло камери: ({cameraGlass.length})
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="formBtn"
                         name="Тачскрін"
                         onClick={filterChange}
                       >
