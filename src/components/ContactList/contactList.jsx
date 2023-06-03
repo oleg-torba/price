@@ -220,7 +220,7 @@ export function LcdItem({ gsm }) {
             </tr>
           );
         } else {
-                      return null;
+                      return null
                     }
       })}
     </table>

@@ -8,7 +8,7 @@ export function Promo ({promoParts}) {
     console.log(promo)
    useEffect(() => {
     setPromo(data.filter(data =>
-        data.vendorCode==='CB-00012256' || data.vendorCode === 'CB-00008428' || data.vendorCode === 'CB-00012222'
+        data.vendorCode==='CB-00003541' || data.vendorCode === 'CB-00012592' || data.vendorCode === 'CB-00010460'
       ))
    }, [data])
     return (

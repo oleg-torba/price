@@ -37,6 +37,29 @@ h2 {
 
  
 }
+
+.searchBtn {
+  width: 130px;
+  background-color: blue;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  color: aliceblue;
+  cursor: pointer;
+
+}
+
+.formBtn:hover {
+  background-color: #fff;
+  color: blue;
+  border: 1px solid blue;
+}
+.formBtn:focus {
+  background-color: #fff;
+  color: blue;
+  border: 1px solid blue;
+}
 .header {
   display: flex;
   flex-direction: column-reverse;
@@ -166,6 +189,9 @@ p {
   .dark-theme {
     background-color: #2e2e2e;
   transition: 0.5s;
+.expoTitle {
+  color: #02be6e;
+}
 .text{
   color: orange;
 }
@@ -173,15 +199,33 @@ p {
   border: 1px solid lightgray;
 }
 .tableItem {
-  color: orange;
+  color: white;
   border-bottom: 1px solid lightgray;
 }
 .tableTitle {
-  color: orange;
+  color: white;
   border: 1px solid lightgray;
 }
     .formBtn {
       background-color: green;
+    }
+    .searchBtn{
+      background-color: green;
+    }
+    .searchBtn:hover {
+      background-color: #fff;
+      color: blue;
+      border: 1px solid blue;
+    }
+    .formBtn:hover {
+      background-color: #fff;
+      color: blue;
+      border: 1px solid blue;
+    }
+    .formBtn:focus {
+      background-color: #fff;
+      color: blue;
+      border: 1px solid blue;
     }
     .theme-icon-dark{
       color: blue;
@@ -498,14 +542,17 @@ a {
 
 .tableTitle{
   padding: 10px;
-  border: 1px solid purple;
+  border: 1px solid gray;
   font-weight: bold;
 }
 .table{
   border-collapse: collapse;
-  border: 1px solid purple;
+  border: 1px solid gray;
   min-width: 100%;
-  
+  margin-left: 10px;
+  @media screen and (max-width:767px) {
+    margin-left: 0;
+  }
 }
 
 .tableItem {
@@ -516,7 +563,7 @@ a {
  flex-direction: row-reverse;
  justify-content: space-between;
  align-items: center;
-  border-bottom: 1px solid purple;
+  border-bottom: 1px solid gray;
 }
 
 .tableImg {
@@ -525,4 +572,14 @@ a {
   margin-bottom: 0;
   margin-left: 20px;
 
+}
+
+.expoTitle {
+  border: 1px solid lightgray;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.expoTitle li {
+  margin-bottom: 5px;
 }

@@ -8,11 +8,11 @@ import { LcdItem } from './ContactList/contactList';
 
 import Data from './apiData.json';
 import Parts from './1000parts.json';
+import { ExpoParts } from './ExpositionParts/ExpositionParts';
 
 export function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [gsm, setGsm] = useState([]);
-  console.log(gsm);
   const [parts, setParts] = useState([]);
   const [filter, setFilter] = useState([]);
   gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
@@ -62,9 +62,11 @@ export function App() {
     if (gsm.length > 1) {
       setFilter(
         gsm.filter(data =>
-          data.name.toLowerCase().includes(e.target.name.toLowerCase())
+          data.name.includes(e.target.name)
         )
       );
+    } else {
+     return (<p>jdsdsdsd</p>)
     }
   };
 
@@ -99,13 +101,15 @@ export function App() {
           {gsm.length > 0 && (
             <Section
               title=<p className="title">
-                За запитом "{searchQuery}" ми знайшли {totalItems} позицій
+                За запитом '{searchQuery}' знайдено {totalItems} позицій
               </p>
             >
+            <ExpoParts/>
               <div className="itemBlock">
                 <div>
                   <ul className="FilterButton">
-                    <li>
+                 {battery.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Акумулятор"
@@ -114,7 +118,9 @@ export function App() {
                         Акумулятори: ({battery.length})
                       </button>
                     </li>
-                    <li>
+                 )}
+                {buzzer.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Бузер"
@@ -123,8 +129,10 @@ export function App() {
                         Бузери: ({buzzer.length})
                       </button>
                     </li>
+                )}
 
-                    <li>
+                {lcd.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Дисплей"
@@ -133,8 +141,10 @@ export function App() {
                         Дисплеї: ({lcd.length})
                       </button>
                     </li>
+                )}
 
-                    <li>
+                {backCover.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Задня"
@@ -143,8 +153,10 @@ export function App() {
                         Задні кришки: ({backCover.length})
                       </button>
                     </li>
+                )}
 
-                    <li>
+                   {camera.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Камера"
@@ -153,7 +165,9 @@ export function App() {
                         Камери: ({camera.length})
                       </button>
                     </li>
-                    <li>
+                   )}
+                   {corps.length >0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Корпус"
@@ -162,7 +176,9 @@ export function App() {
                         Корпус: ({corps.length})
                       </button>
                     </li>
-                    <li>
+                   )}
+                 {ic.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Мікросхема"
@@ -171,7 +187,9 @@ export function App() {
                         Контролери\IC: ({ic.length})
                       </button>
                     </li>
-                    <li>
+                 )}
+                   {charge.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Роз'єм"
@@ -180,7 +198,9 @@ export function App() {
                         Роз'єми: ({charge.length})
                       </button>
                     </li>
-                    <li>
+                   )}
+                  {speaker.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Динамік"
@@ -189,7 +209,9 @@ export function App() {
                         Спікери: ({speaker.length})
                       </button>
                     </li>
-                    <li>
+                  )}
+                  {cameraGlass.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Скло камери"
@@ -198,7 +220,9 @@ export function App() {
                         Скло камери: ({cameraGlass.length})
                       </button>
                     </li>
-                    <li>
+                  )}
+                 {touch.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Тачскрін"
@@ -207,7 +231,9 @@ export function App() {
                         Сенсори: ({touch.length})
                       </button>
                     </li>
-                    <li>
+                 )}
+                  {flat.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Шлейф"
@@ -216,6 +242,7 @@ export function App() {
                         Шлейфи: ({flat.length})
                       </button>
                     </li>
+                  )}
                   </ul>
                 </div>
                 <div className="items">
@@ -251,13 +278,15 @@ export function App() {
           {gsm.length > 0 && (
             <Section
               title=<p className="title">
-                За запитом "{searchQuery}" ми знайшли {totalItems} позицій
+                За запитом '{searchQuery}' знайдено {totalItems} позицій
               </p>
             >
+            <ExpoParts/>
               <div className="itemBlock">
                 <div>
                   <ul className="FilterButton">
-                    <li>
+                 {battery.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Акумулятор"
@@ -266,17 +295,21 @@ export function App() {
                         Акумулятори: ({battery.length})
                       </button>
                     </li>
-                    <li>
+                 )}
+                {buzzer.length > 0 && (
+                      <li>
                       <button
+                        className="formBtn"
                         name="Бузер"
                         onClick={filterChange}
-                        className="formBtn"
                       >
                         Бузери: ({buzzer.length})
                       </button>
                     </li>
+                )}
 
-                    <li>
+                {lcd.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Дисплей"
@@ -285,8 +318,10 @@ export function App() {
                         Дисплеї: ({lcd.length})
                       </button>
                     </li>
+                )}
 
-                    <li>
+                {backCover.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Задня"
@@ -295,8 +330,10 @@ export function App() {
                         Задні кришки: ({backCover.length})
                       </button>
                     </li>
+                )}
 
-                    <li>
+                   {camera.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Камера"
@@ -305,7 +342,9 @@ export function App() {
                         Камери: ({camera.length})
                       </button>
                     </li>
-                    <li>
+                   )}
+                   {corps.length >0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Корпус"
@@ -314,7 +353,9 @@ export function App() {
                         Корпус: ({corps.length})
                       </button>
                     </li>
-                    <li>
+                   )}
+                 {ic.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Мікросхема"
@@ -323,7 +364,9 @@ export function App() {
                         Контролери\IC: ({ic.length})
                       </button>
                     </li>
-                    <li>
+                 )}
+                   {charge.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Роз'єм"
@@ -332,7 +375,9 @@ export function App() {
                         Роз'єми: ({charge.length})
                       </button>
                     </li>
-                    <li>
+                   )}
+                  {speaker.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Динамік"
@@ -341,7 +386,9 @@ export function App() {
                         Спікери: ({speaker.length})
                       </button>
                     </li>
-                    <li>
+                  )}
+                  {cameraGlass.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Скло камери"
@@ -350,7 +397,9 @@ export function App() {
                         Скло камери: ({cameraGlass.length})
                       </button>
                     </li>
-                    <li>
+                  )}
+                 {touch.length > 0 && (
+                     <li>
                       <button
                         className="formBtn"
                         name="Тачскрін"
@@ -359,7 +408,9 @@ export function App() {
                         Сенсори: ({touch.length})
                       </button>
                     </li>
-                    <li>
+                 )}
+                  {flat.length > 0 && (
+                      <li>
                       <button
                         className="formBtn"
                         name="Шлейф"
@@ -368,6 +419,7 @@ export function App() {
                         Шлейфи: ({flat.length})
                       </button>
                     </li>
+                  )}
                   </ul>
                 </div>
                 <div className="items">

@@ -11,8 +11,9 @@ export function Form ({onSubmit}) {
       const handleSubmit = e => {
         e.preventDefault();
         if (searchQuery === '') {
-          return
+          return 
         }
+        
         onSubmit(searchQuery);
       };
   
@@ -27,7 +28,7 @@ export function Form ({onSubmit}) {
           onChange={handleChange}
         />
         
-        <button className="formBtn" type="submit">
+        <button className="searchBtn" type="submit">
           Пошук
         </button>
         </form>
