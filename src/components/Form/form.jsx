@@ -1,44 +1,44 @@
-import { useState} from 'react';
-import PropTypes from 'prop-types';
+// import { useState} from 'react';
+// import PropTypes from 'prop-types';
 
 
-export function Form ({onSubmit}) {
-    const [searchQuery, setSearchQuery] = useState('');
-    const handleChange = e => {
-        setSearchQuery(e.currentTarget.value.toLowerCase());
+// export function Form ({onSubmit}) {
+//     const [searchQuery, setSearchQuery] = useState('');
+//     const handleChange = e => {
+//         setSearchQuery(e.currentTarget.value.toLowerCase());
       
-      };
-      const handleSubmit = e => {
-        e.preventDefault();
-        if (searchQuery === '') {
-          return 
-        }
+//       };
+//       const handleSubmit = e => {
+//         e.preventDefault();
+//         if (searchQuery === '') {
+//           return 
+//         }
         
-        onSubmit(searchQuery);
-      };
+//         onSubmit(searchQuery);
+//       };
   
-  return(
-<form  className="form" onSubmit={handleSubmit}>
+//   return(
+// <form  className="form" onSubmit={handleSubmit}>
         
-        <input
-          className="formInput"
-          placeholder="Введіть модель"
-          name="data"
-          value={searchQuery}
-          onChange={handleChange}
-        />
+//         <input
+//           className="formInput"
+//           placeholder="Введіть модель"
+//           name="data"
+//           value={searchQuery}
+//           onChange={handleChange}
+//         />
         
-        <button className="searchBtn" type="submit">
-          Пошук
-        </button>
-        </form>
-  )
+//         <button>
+//           Пошук
+//         </button>
+//         </form>
+//   )
   
   
 
-  }
+//   }
 
 
-Form.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
+// Form.propTypes = {
+//   onSubmit: PropTypes.func.isRequired,
+// };

@@ -38,7 +38,7 @@ export function Header({ onSubmit, theme, onChangeTheme }) {
             onChange={handleChange}
           />
 
-          <button className="formBtn" type="submit">
+          <button className="searchBtn" type="submit">
             Пошук
           </button>
         </form>
