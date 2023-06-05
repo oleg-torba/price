@@ -157,7 +157,6 @@ p {
   transition: 0.5s;
 }
 .light-theme {
-  transition: 0.5s;
   background-color: lightyellow;
   transition: 0.5s;
 
