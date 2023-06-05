@@ -15,8 +15,8 @@ export function App() {
   const [gsm, setGsm] = useState([]);
   const [parts, setParts] = useState([]);
   const [filter, setFilter] = useState([]);
-  gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
-  parts.sort((a, b) => (a.name > b.name ? 1 : -1));
+  gsm.sort((a, b) => (a.price < b.price ? 1 : -1));
+  parts.sort((a, b) => (a.name < b.name ? 1 : -1));
   const data = Data.shop.items.item;
   const partList = Parts.yml_catalog.shop.offers.offer;
   const totalItems = gsm.length + parts.length;
@@ -65,9 +65,11 @@ export function App() {
           data.name.includes(e.target.name)
         )
       );
-    } else {
-     return (<p>jdsdsdsd</p>)
-    }
+    } 
+  };
+  const onHomeClick = () => {
+    setSearchQuery('')
+    setGsm([])
   };
 
   function formSubmit(query) {
@@ -89,6 +91,7 @@ export function App() {
               onSubmit={formSubmit}
               theme={theme}
               onChangeTheme={onChangeTheme}
+              homeClick = {onHomeClick}
             />
           </Section>
 
@@ -267,6 +270,7 @@ export function App() {
               onSubmit={formSubmit}
               theme={theme}
               onChangeTheme={onChangeTheme}
+              homeClick = {onHomeClick}
             />
           </Section>
           {gsm.length < 1 && (

@@ -67,15 +67,14 @@ h2 {
 }
 
 .form {
-  width: 80%;
+  width: 100%;
   text-align: center;
   @media screen and (min-width: 768px) {
     margin: 0 auto;
-
+width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
   }
 }
 
@@ -160,6 +159,8 @@ p {
 .light-theme {
   transition: 0.5s;
   background-color: lightyellow;
+  transition: 0.5s;
+
 }
 .theme-icon-light {
   position: absolute;
@@ -182,26 +183,44 @@ p {
   transition: 0.5s;
   .expoTitle {
     color: #02be6e;
+    transition: 0.5s;
+
+  }
+  .home {
+    color: grey;
+    transition: 0.5s;
+
   }
   .text {
     color: orange;
+    transition: 0.5s;
+
   }
   .table {
     border: 1px solid lightgray;
+    transition: 0.5s;
+
   }
   .tableItem {
     color: white;
     border-bottom: 1px solid lightgray;
+    transition: 0.5s;
   }
   .tableTitle {
     color: white;
     border: 1px solid lightgray;
+    transition: 0.5s;
+
   }
   .formBtn {
     background-color: green;
+    transition: 0.5s;
+
   }
   .searchBtn {
     background-color: green;
+    transition: 0.5s;
+
   }
   .searchBtn:hover {
     background-color: #fff;
@@ -220,6 +239,8 @@ p {
   }
   .theme-icon-dark {
     color: blue;
+    transition: 0.5s;
+
   }
 
   .serviceList,
@@ -310,12 +331,7 @@ li {
   @media screen and (min-width: 320px) {
     width: 100%;
   }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-} 
-  
 
- 
 }
 @media screen and (max-width: 580px) {
   input,
@@ -332,12 +348,18 @@ li {
   }
   .theme {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0.3%;
+    left: 9%;
     padding: 5px;
   }
   .formInput {
     margin: 10px 0;
+  }
+  .home {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    padding: 5px;
   }
 }
 .section {
@@ -552,4 +574,15 @@ a {
 }
 .expoTitle li {
   margin-bottom: 5px;
+}
+
+.available {
+  background-color: green;
+}
+.unavailable {
+  background-color: orange;
+}
+
+.home {
+  color: blue;
 }

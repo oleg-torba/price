@@ -1,8 +1,9 @@
-import { BsTelephone, BsFillSunFill} from 'react-icons/bs';
-import { WiMoonWaxingCrescent1 } from "react-icons/wi"
+import { BsTelephone, BsFillSunFill } from 'react-icons/bs';
+import { WiMoonWaxingCrescent1 } from 'react-icons/wi';
+import { AiOutlineHome } from 'react-icons/ai';
 
 import { useState } from 'react';
-export function Header({ onSubmit, theme, onChangeTheme }) {
+export function Header({ onSubmit, theme, onChangeTheme, homeClick }) {
   const [searchQuery, setSearchQuery] = useState('');
   const handleChange = e => {
     setSearchQuery(e.currentTarget.value.toLowerCase());
@@ -14,21 +15,15 @@ export function Header({ onSubmit, theme, onChangeTheme }) {
     }
     onSubmit(searchQuery);
   };
+
+
   return (
     <>
       <header className="header">
-      <div class="theme">
-        
-     
-
-        <div class="switch">
-            {theme === 'dark-theme' ? <span className="checkboxActive" onClick={onChangeTheme}><WiMoonWaxingCrescent1 className='theme-icon-dark'/>
-           </span> : <span className="checkbox" onClick={onChangeTheme}>
-           <BsFillSunFill className='theme-icon-light'/>
-           </span>}
-            {theme === 'dark-theme' ? <span className="slideractive" onClick={onChangeTheme}></span> : <span className="slider" onClick={onChangeTheme}></span>}
+        <div className='home'>
+        <AiOutlineHome onClick={homeClick} size={25}/>
         </div>
-      </div>
+      
         <form className="form" onSubmit={handleSubmit}>
           <input
             className="formInput"
@@ -42,7 +37,25 @@ export function Header({ onSubmit, theme, onChangeTheme }) {
             Пошук
           </button>
         </form>
-        <a className='phone' href="tel:098-188-28-58">
+        <div class="theme">
+          <div class="switch">
+            {theme === 'dark-theme' ? (
+              <span className="checkboxActive" onClick={onChangeTheme}>
+                <WiMoonWaxingCrescent1 className="theme-icon-dark" />
+              </span>
+            ) : (
+              <span className="checkbox" onClick={onChangeTheme}>
+                <BsFillSunFill className="theme-icon-light" />
+              </span>
+            )}
+            {theme === 'dark-theme' ? (
+              <span className="slideractive" onClick={onChangeTheme}></span>
+            ) : (
+              <span className="slider" onClick={onChangeTheme}></span>
+            )}
+          </div>
+        </div>
+        <a className="phone" href="tel:098-188-28-58">
           <BsTelephone />
           {'  '}098-188-28-58
         </a>
