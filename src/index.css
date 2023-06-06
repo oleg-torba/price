@@ -326,12 +326,28 @@ li {
   margin-bottom: 20px;
 }
 
-.container {
-  @media screen and (min-width: 320px) {
+
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+
     width: 100%;
+   
+  }
+  
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 768px;
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    .container {
+     width: 1280px;
+    }
   }
 
-}
+
 @media screen and (max-width: 580px) {
   input,
   select {
@@ -342,7 +358,7 @@ li {
   .phone {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 2%;
     padding: 5px;
   }
   .theme {
