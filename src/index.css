@@ -1,14 +1,6 @@
 @import-normalize; /* bring in normalize.css styles */
 
-@-ms-viewport {
-  width: device-width;
-}
-@-o-viewport {
-  width: device-width;
-}
-@viewport {
-  width: device-width;
-}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -67,10 +59,21 @@ h2 {
 }
 .header {
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
+padding-bottom: 5px;
+  border-bottom: 1px solid lightgray;
 }
-
+.phone {
+  font-weight: 500;
+}
+.news {
+  font-weight: 500;
+  margin-left: 10px;
+}
+.headerBlock {
+  margin-left: auto;
+  display: flex;
+}
 .form {
   width: 100%;
   text-align: center;
@@ -251,7 +254,8 @@ p {
   .serviceList {
     outline: 1px solid grey;
   }
-  .phone {
+  .phone,
+  .newsLink {
     color: grey;
   }
 }
@@ -333,8 +337,8 @@ li {
 }
 
 .title {
-  display: inline-block;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 a {
@@ -545,33 +549,20 @@ a {
     flex-direction: column;
     justify-content: center;
   }
-  .phone {
-    position: absolute;
-    top: 0;
-    right: 2%;
-    padding: 5px;
-  }
   .theme {
-    position: absolute;
-    top: 0.3%;
-    left: 9%;
-    padding: 5px;
+    margin-left: auto;
+    margin-bottom: 5px;
+  }
+
+  .headerBlock {
+    flex-direction: column-reverse;
   }
   .formInput {
     margin: 10px 0;
   }
-  .home {
-    position: absolute;
-    top: 0;
-    left: 2%;
-    padding: 5px;
-  }
 }
 
 @media screen and (min-width: 768px) {
-  .header {
-    flex-direction: inherit;
-  }
   .itemBlock {
     flex-direction: row;
   }
@@ -583,10 +574,13 @@ a {
     margin-right: 10px;
   }
   .form {
-    margin: 0 auto;
     width: 70%;
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
-    align-items: center;
+  }
+  .home {
+    margin-right: 10px;
   }
 }

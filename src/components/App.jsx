@@ -5,6 +5,7 @@ import { Header } from './Header/Header';
 import { Promo } from './Promo/Promo';
 import { Section } from './Section/section';
 import { LcdItem } from './ContactList/contactList';
+import { Form } from './Form/form';
 
 import Data from './apiData.json';
 import Parts from './1000parts.json';
@@ -86,15 +87,19 @@ export function App() {
     <>
       {theme === 'dark-theme' ? (
         <div className="container dark-theme">
-          <Section>
-            <Header
-              onSubmit={formSubmit}
-              theme={theme}
-              onChangeTheme={onChangeTheme}
-              homeClick = {onHomeClick}
-            />
-          </Section>
-
+       
+           <Section>
+           <Header
+             
+             theme={theme}
+             onChangeTheme={onChangeTheme}
+             homeClick = {onHomeClick}
+           />
+           </Section>
+  
+<Section>
+  <Form  onSubmit={formSubmit}/>
+  </Section>
           {gsm.length < 1 && (
             <Section>
               <Promo promoParts={data} />
@@ -265,14 +270,19 @@ export function App() {
         </div>
       ) : (
         <div className="container light-theme">
-          <Section>
-            <Header
-              onSubmit={formSubmit}
-              theme={theme}
-              onChangeTheme={onChangeTheme}
-              homeClick = {onHomeClick}
-            />
-          </Section>
+       
+           <Section>
+           <Header
+             
+             theme={theme}
+             onChangeTheme={onChangeTheme}
+             homeClick = {onHomeClick}
+           />
+           </Section>
+  
+<Section>
+  <Form  onSubmit={formSubmit}/>
+  </Section>
           {gsm.length < 1 && (
             <Section>
               <Promo promoParts={data} />
@@ -436,7 +446,8 @@ export function App() {
               </div>
             </Section>
           )}
-          <Section title=<p>Доступні сервісні центри</p>>
+
+          <Section title=<p className="title">Доступні сервісні центри</p>>
             <ServiceList />
           </Section>
         </div>

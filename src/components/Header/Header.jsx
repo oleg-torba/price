@@ -1,42 +1,21 @@
 import { BsTelephone, BsFillSunFill } from 'react-icons/bs';
 import { WiMoonWaxingCrescent1 } from 'react-icons/wi';
-import { AiOutlineHome } from 'react-icons/ai';
 
-import { useState } from 'react';
-export function Header({ onSubmit, theme, onChangeTheme, homeClick }) {
-  const [searchQuery, setSearchQuery] = useState('');
-  const handleChange = e => {
-    setSearchQuery(e.currentTarget.value.toLowerCase());
-  };
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (searchQuery === '') {
-      return;
-    }
-    onSubmit(searchQuery);
-  };
-
-
+export function Header({ theme, onChangeTheme, homeClick }) {
   return (
     <>
       <header className="header">
-        <div className='home'>
-        <AiOutlineHome onClick={homeClick} size={25}/>
+        <div className="home">
+          <p onClick={homeClick}>Головна</p>
         </div>
-      
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            className="formInput"
-            placeholder="Введіть модель"
-            name="data"
-            value={searchQuery}
-            onChange={handleChange}
-          />
-
-          <button className="searchBtn" type="submit">
-            Пошук
-          </button>
-        </form>
+        <div  className="news">
+          <a className='newsLink' href="https://gsminfo.com.ua/88837-amoled-chy-ips-yakyj-dysplej-dlya-smartfona-krashhyj.html">Корисне</a>
+        </div>
+        <div className='headerBlock'>
+        <a className="phone" href="tel:0981882858">
+          <BsTelephone />
+          {'  '}0981882858
+        </a>
         <div class="theme">
           <div class="switch">
             {theme === 'dark-theme' ? (
@@ -55,10 +34,7 @@ export function Header({ onSubmit, theme, onChangeTheme, homeClick }) {
             )}
           </div>
         </div>
-        <a className="phone" href="tel:098-188-28-58">
-          <BsTelephone />
-          {'  '}098-188-28-58
-        </a>
+        </div>
       </header>
     </>
   );
