@@ -69,22 +69,11 @@ h2 {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-
-  @media screen and (min-width: 768px) {
-    flex-direction: inherit;
-  }
 }
 
 .form {
   width: 100%;
   text-align: center;
-  @media screen and (min-width: 768px) {
-    margin: 0 auto;
-width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 p {
@@ -99,9 +88,6 @@ p {
 
   padding: 0 10px;
   font-weight: 500;
-  @media screen and (min-width: 768px) {
-    margin-right: 10px;
-  }
 }
 .theme {
   display: flex;
@@ -168,7 +154,6 @@ p {
 .light-theme {
   background-color: lightyellow;
   transition: 0.5s;
-
 }
 .theme-icon-light {
   position: absolute;
@@ -192,22 +177,18 @@ p {
   .expoTitle {
     color: #02be6e;
     transition: 0.5s;
-
   }
   .home {
     color: grey;
     transition: 0.5s;
-
   }
   .text {
     color: orange;
     transition: 0.5s;
-
   }
   .table {
     border: 1px solid lightgray;
     transition: 0.5s;
-
   }
   .tableItem {
     color: white;
@@ -218,17 +199,14 @@ p {
     color: white;
     border: 1px solid lightgray;
     transition: 0.5s;
-
   }
   .formBtn {
     background-color: green;
     transition: 0.5s;
-
   }
   .searchBtn {
     background-color: green;
     transition: 0.5s;
-
   }
   .searchBtn:hover {
     background-color: #fff;
@@ -248,7 +226,6 @@ p {
   .theme-icon-dark {
     color: blue;
     transition: 0.5s;
-
   }
 
   .serviceList,
@@ -298,9 +275,6 @@ p {
   border-radius: 4px;
   margin-bottom: 10px;
   padding: 5px;
-  @media screen and (max-width: 768px) {
-    width: 250px;
-  }
 }
 
 .contactValue {
@@ -335,17 +309,12 @@ li {
   margin-bottom: 20px;
 }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
 
-  .container {
-    margin-right: auto;
-    margin-left: auto;
-
-  
   width: 100%;
-  }
-  
-
-
+}
 
 @media screen and (max-width: 580px) {
   input,
@@ -353,29 +322,7 @@ li {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 767px) {
-  .phone {
-    position: absolute;
-    top: 0;
-    right: 2%;
-    padding: 5px;
-  }
-  .theme {
-    position: absolute;
-    top: 0.3%;
-    left: 9%;
-    padding: 5px;
-  }
-  .formInput {
-    margin: 10px 0;
-  }
-  .home {
-    position: absolute;
-    top: 0;
-    left: 2%;
-    padding: 5px;
-  }
-}
+
 .section {
   color: black;
   font-size: 16px;
@@ -475,10 +422,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media screen and (min-width: 768px) {
-    display: block;
-    margin-bottom: 0;
-  }
 
   padding: 20px;
   border: 1px solid lightgray;
@@ -494,9 +437,6 @@ a {
 .itemBlock {
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-  }
 }
 
 .items {
@@ -514,12 +454,6 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
-  }
 }
 
 .promoTitle {
@@ -541,12 +475,6 @@ a {
 .promoHead {
   display: flex;
   margin: 10px 0;
-  @media screen and (max-width: 768px) {
-    display: block;
-    .promoTitle {
-      margin-bottom: 5px;
-    }
-  }
 }
 
 .tableTitle {
@@ -559,9 +487,6 @@ a {
   border: 1px solid lightgray;
   min-width: 100%;
   margin-left: 10px;
-  @media screen and (max-width: 767px) {
-    margin-left: 0;
-  }
 }
 
 .tableItem {
@@ -599,4 +524,69 @@ a {
 
 .home {
   color: blue;
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    width: 250px;
+  }
+  .table {
+    margin-left: 0;
+  }
+  .promoTitle {
+    margin-bottom: 5px;
+  }
+  .promoHead {
+    display: block;
+  }
+  .promoItem {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .phone {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    padding: 5px;
+  }
+  .theme {
+    position: absolute;
+    top: 0.3%;
+    left: 9%;
+    padding: 5px;
+  }
+  .formInput {
+    margin: 10px 0;
+  }
+  .home {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: inherit;
+  }
+  .itemBlock {
+    flex-direction: row;
+  }
+  .FilterButton {
+    display: block;
+    margin-bottom: 0;
+  }
+  .formInput {
+    margin-right: 10px;
+  }
+  .form {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
