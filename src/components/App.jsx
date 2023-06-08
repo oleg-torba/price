@@ -61,16 +61,12 @@ export function App() {
   };
   const filterChange = e => {
     if (gsm.length > 1) {
-      setFilter(
-        gsm.filter(data =>
-          data.name.includes(e.target.name)
-        )
-      );
-    } 
+      setFilter(gsm.filter(data => data.name.includes(e.target.name)));
+    }
   };
   const onHomeClick = () => {
-    setSearchQuery('')
-    setGsm([])
+    setSearchQuery('');
+    setGsm([]);
   };
 
   function formSubmit(query) {
@@ -87,19 +83,17 @@ export function App() {
     <>
       {theme === 'dark-theme' ? (
         <div className="container dark-theme">
-       
-           <Section>
-           <Header
-             
-             theme={theme}
-             onChangeTheme={onChangeTheme}
-             homeClick = {onHomeClick}
-           />
-           </Section>
-  
-<Section>
-  <Form  onSubmit={formSubmit}/>
-  </Section>
+          <Section>
+            <Header
+              theme={theme}
+              onChangeTheme={onChangeTheme}
+              homeClick={onHomeClick}
+            />
+          </Section>
+
+          <Section>
+            <Form onSubmit={formSubmit} />
+          </Section>
           {gsm.length < 1 && (
             <Section>
               <Promo promoParts={data} />
@@ -112,145 +106,145 @@ export function App() {
                 За запитом '{searchQuery}' знайдено {totalItems} позицій
               </p>
             >
-            <ExpoParts/>
+              <ExpoParts />
               <div className="itemBlock">
                 <div>
                   <ul className="FilterButton">
-                 {battery.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Акумулятор"
-                        onClick={filterChange}
-                      >
-                        Акумулятори: ({battery.length})
-                      </button>
-                    </li>
-                 )}
-                {buzzer.length > 0 && (
+                    {battery.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Бузер"
-                        onClick={filterChange}
-                      >
-                        Бузери: ({buzzer.length})
-                      </button>
-                    </li>
-                )}
+                        <button
+                          className="formBtn"
+                          name="Акумулятор"
+                          onClick={filterChange}
+                        >
+                          Акумулятори: ({battery.length})
+                        </button>
+                      </li>
+                    )}
+                    {buzzer.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Бузер"
+                          onClick={filterChange}
+                        >
+                          Бузери: ({buzzer.length})
+                        </button>
+                      </li>
+                    )}
 
-                {lcd.length > 0 && (
+                    {lcd.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Дисплей"
-                        onClick={filterChange}
-                      >
-                        Дисплеї: ({lcd.length})
-                      </button>
-                    </li>
-                )}
+                        <button
+                          className="formBtn"
+                          name="Дисплей"
+                          onClick={filterChange}
+                        >
+                          Дисплеї: ({lcd.length})
+                        </button>
+                      </li>
+                    )}
 
-                {backCover.length > 0 && (
+                    {backCover.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Задня"
-                        onClick={filterChange}
-                      >
-                        Задні кришки: ({backCover.length})
-                      </button>
-                    </li>
-                )}
+                        <button
+                          className="formBtn"
+                          name="Задня"
+                          onClick={filterChange}
+                        >
+                          Задні кришки: ({backCover.length})
+                        </button>
+                      </li>
+                    )}
 
-                   {camera.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Камера"
-                        onClick={filterChange}
-                      >
-                        Камери: ({camera.length})
-                      </button>
-                    </li>
-                   )}
-                   {corps.length >0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Корпус"
-                        onClick={filterChange}
-                      >
-                        Корпус: ({corps.length})
-                      </button>
-                    </li>
-                   )}
-                 {ic.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Мікросхема"
-                        onClick={filterChange}
-                      >
-                        Контролери\IC: ({ic.length})
-                      </button>
-                    </li>
-                 )}
-                   {charge.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Роз'єм"
-                        onClick={filterChange}
-                      >
-                        Роз'єми: ({charge.length})
-                      </button>
-                    </li>
-                   )}
-                  {speaker.length > 0 && (
+                    {camera.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Динамік"
-                        onClick={filterChange}
-                      >
-                        Спікери: ({speaker.length})
-                      </button>
-                    </li>
-                  )}
-                  {cameraGlass.length > 0 && (
+                        <button
+                          className="formBtn"
+                          name="Камера"
+                          onClick={filterChange}
+                        >
+                          Камери: ({camera.length})
+                        </button>
+                      </li>
+                    )}
+                    {corps.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Скло камери"
-                        onClick={filterChange}
-                      >
-                        Скло камери: ({cameraGlass.length})
-                      </button>
-                    </li>
-                  )}
-                 {touch.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Тачскрін"
-                        onClick={filterChange}
-                      >
-                        Сенсори: ({touch.length})
-                      </button>
-                    </li>
-                 )}
-                  {flat.length > 0 && (
+                        <button
+                          className="formBtn"
+                          name="Корпус"
+                          onClick={filterChange}
+                        >
+                          Корпус: ({corps.length})
+                        </button>
+                      </li>
+                    )}
+                    {ic.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Шлейф"
-                        onClick={filterChange}
-                      >
-                        Шлейфи: ({flat.length})
-                      </button>
-                    </li>
-                  )}
+                        <button
+                          className="formBtn"
+                          name="Мікросхема"
+                          onClick={filterChange}
+                        >
+                          Контролери\IC: ({ic.length})
+                        </button>
+                      </li>
+                    )}
+                    {charge.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Роз'єм"
+                          onClick={filterChange}
+                        >
+                          Роз'єми: ({charge.length})
+                        </button>
+                      </li>
+                    )}
+                    {speaker.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Динамік"
+                          onClick={filterChange}
+                        >
+                          Спікери: ({speaker.length})
+                        </button>
+                      </li>
+                    )}
+                    {cameraGlass.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Скло камери"
+                          onClick={filterChange}
+                        >
+                          Скло камери: ({cameraGlass.length})
+                        </button>
+                      </li>
+                    )}
+                    {touch.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Тачскрін"
+                          onClick={filterChange}
+                        >
+                          Сенсори: ({touch.length})
+                        </button>
+                      </li>
+                    )}
+                    {flat.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Шлейф"
+                          onClick={filterChange}
+                        >
+                          Шлейфи: ({flat.length})
+                        </button>
+                      </li>
+                    )}
                   </ul>
                 </div>
                 <div className="items">
@@ -267,22 +261,25 @@ export function App() {
           <Section title=<p className="title">Доступні сервісні центри</p>>
             <ServiceList />
           </Section>
+          <Section>
+            <p className="footer">
+              The application was developed by a young developer Torba O.
+            </p>
+          </Section>
         </div>
       ) : (
         <div className="container light-theme">
-       
-           <Section>
-           <Header
-             
-             theme={theme}
-             onChangeTheme={onChangeTheme}
-             homeClick = {onHomeClick}
-           />
-           </Section>
-  
-<Section>
-  <Form  onSubmit={formSubmit}/>
-  </Section>
+          <Section>
+            <Header
+              theme={theme}
+              onChangeTheme={onChangeTheme}
+              homeClick={onHomeClick}
+            />
+          </Section>
+
+          <Section>
+            <Form onSubmit={formSubmit} />
+          </Section>
           {gsm.length < 1 && (
             <Section>
               <Promo promoParts={data} />
@@ -295,145 +292,145 @@ export function App() {
                 За запитом '{searchQuery}' знайдено {totalItems} позицій
               </p>
             >
-            <ExpoParts/>
+              <ExpoParts />
               <div className="itemBlock">
                 <div>
                   <ul className="FilterButton">
-                 {battery.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Акумулятор"
-                        onClick={filterChange}
-                      >
-                        Акумулятори: ({battery.length})
-                      </button>
-                    </li>
-                 )}
-                {buzzer.length > 0 && (
+                    {battery.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Бузер"
-                        onClick={filterChange}
-                      >
-                        Бузери: ({buzzer.length})
-                      </button>
-                    </li>
-                )}
+                        <button
+                          className="formBtn"
+                          name="Акумулятор"
+                          onClick={filterChange}
+                        >
+                          Акумулятори: ({battery.length})
+                        </button>
+                      </li>
+                    )}
+                    {buzzer.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Бузер"
+                          onClick={filterChange}
+                        >
+                          Бузери: ({buzzer.length})
+                        </button>
+                      </li>
+                    )}
 
-                {lcd.length > 0 && (
+                    {lcd.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Дисплей"
-                        onClick={filterChange}
-                      >
-                        Дисплеї: ({lcd.length})
-                      </button>
-                    </li>
-                )}
+                        <button
+                          className="formBtn"
+                          name="Дисплей"
+                          onClick={filterChange}
+                        >
+                          Дисплеї: ({lcd.length})
+                        </button>
+                      </li>
+                    )}
 
-                {backCover.length > 0 && (
+                    {backCover.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Задня"
-                        onClick={filterChange}
-                      >
-                        Задні кришки: ({backCover.length})
-                      </button>
-                    </li>
-                )}
+                        <button
+                          className="formBtn"
+                          name="Задня"
+                          onClick={filterChange}
+                        >
+                          Задні кришки: ({backCover.length})
+                        </button>
+                      </li>
+                    )}
 
-                   {camera.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Камера"
-                        onClick={filterChange}
-                      >
-                        Камери: ({camera.length})
-                      </button>
-                    </li>
-                   )}
-                   {corps.length >0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Корпус"
-                        onClick={filterChange}
-                      >
-                        Корпус: ({corps.length})
-                      </button>
-                    </li>
-                   )}
-                 {ic.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Мікросхема"
-                        onClick={filterChange}
-                      >
-                        Контролери\IC: ({ic.length})
-                      </button>
-                    </li>
-                 )}
-                   {charge.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Роз'єм"
-                        onClick={filterChange}
-                      >
-                        Роз'єми: ({charge.length})
-                      </button>
-                    </li>
-                   )}
-                  {speaker.length > 0 && (
+                    {camera.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Динамік"
-                        onClick={filterChange}
-                      >
-                        Спікери: ({speaker.length})
-                      </button>
-                    </li>
-                  )}
-                  {cameraGlass.length > 0 && (
+                        <button
+                          className="formBtn"
+                          name="Камера"
+                          onClick={filterChange}
+                        >
+                          Камери: ({camera.length})
+                        </button>
+                      </li>
+                    )}
+                    {corps.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Скло камери"
-                        onClick={filterChange}
-                      >
-                        Скло камери: ({cameraGlass.length})
-                      </button>
-                    </li>
-                  )}
-                 {touch.length > 0 && (
-                     <li>
-                      <button
-                        className="formBtn"
-                        name="Тачскрін"
-                        onClick={filterChange}
-                      >
-                        Сенсори: ({touch.length})
-                      </button>
-                    </li>
-                 )}
-                  {flat.length > 0 && (
+                        <button
+                          className="formBtn"
+                          name="Корпус"
+                          onClick={filterChange}
+                        >
+                          Корпус: ({corps.length})
+                        </button>
+                      </li>
+                    )}
+                    {ic.length > 0 && (
                       <li>
-                      <button
-                        className="formBtn"
-                        name="Шлейф"
-                        onClick={filterChange}
-                      >
-                        Шлейфи: ({flat.length})
-                      </button>
-                    </li>
-                  )}
+                        <button
+                          className="formBtn"
+                          name="Мікросхема"
+                          onClick={filterChange}
+                        >
+                          Контролери\IC: ({ic.length})
+                        </button>
+                      </li>
+                    )}
+                    {charge.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Роз'єм"
+                          onClick={filterChange}
+                        >
+                          Роз'єми: ({charge.length})
+                        </button>
+                      </li>
+                    )}
+                    {speaker.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Динамік"
+                          onClick={filterChange}
+                        >
+                          Спікери: ({speaker.length})
+                        </button>
+                      </li>
+                    )}
+                    {cameraGlass.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Скло камери"
+                          onClick={filterChange}
+                        >
+                          Скло камери: ({cameraGlass.length})
+                        </button>
+                      </li>
+                    )}
+                    {touch.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Тачскрін"
+                          onClick={filterChange}
+                        >
+                          Сенсори: ({touch.length})
+                        </button>
+                      </li>
+                    )}
+                    {flat.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Шлейф"
+                          onClick={filterChange}
+                        >
+                          Шлейфи: ({flat.length})
+                        </button>
+                      </li>
+                    )}
                   </ul>
                 </div>
                 <div className="items">
@@ -449,6 +446,11 @@ export function App() {
 
           <Section title=<p className="title">Доступні сервісні центри</p>>
             <ServiceList />
+          </Section>
+          <Section>
+            <p className="footer">
+              The application was developed by a young developer Torba O.
+            </p>
           </Section>
         </div>
       )}

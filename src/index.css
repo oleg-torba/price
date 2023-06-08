@@ -62,7 +62,9 @@ h2 {
   align-items: center;
 padding-bottom: 5px;
   border-bottom: 1px solid lightgray;
+
 }
+
 .phone {
   font-weight: 500;
 }
@@ -185,6 +187,16 @@ p {
     color: grey;
     transition: 0.5s;
   }
+
+  .home:hover {
+    color: white;
+  }
+  .newsLink {
+    color: grey;
+  }
+  .newsLink:hover {
+    color: white;
+  }
   .text {
     color: orange;
     transition: 0.5s;
@@ -257,6 +269,9 @@ p {
   .phone,
   .newsLink {
     color: grey;
+  }
+  .newsLink:hover {
+    color: white;
   }
 }
 
@@ -336,14 +351,13 @@ li {
   margin-right: auto;
 }
 
+
 .title {
   text-align: center;
   margin-bottom: 10px;
 }
 
-a {
-  color: blue;
-}
+
 
 span {
   font-weight: 500;
@@ -526,8 +540,16 @@ a {
   background-color: orange;
 }
 
-.home {
+.home, .newsLink {
+  color: black;
+  cursor: pointer;
+}
+.home:hover, .newsLink:hover {
   color: blue;
+}
+
+.footer {
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -584,3 +606,4 @@ a {
     margin-right: 10px;
   }
 }
+
