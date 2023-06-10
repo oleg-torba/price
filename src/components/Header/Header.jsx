@@ -1,6 +1,5 @@
 import { BsTelephone, BsFillSunFill } from 'react-icons/bs';
 import { WiMoonWaxingCrescent1 } from 'react-icons/wi';
-
 export function Header({ theme, onChangeTheme, homeClick }) {
   return (
     <>

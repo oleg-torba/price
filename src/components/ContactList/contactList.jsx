@@ -53,8 +53,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceCharge} грн</td>
               )}
                  {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
                
             </tr>
           );
@@ -72,8 +72,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceCharge} грн</td>
               )}
     {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -91,8 +91,8 @@ export function LcdItem({ gsm }) {
               )}
 
 {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -109,8 +109,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceLCD} грн</td>
               )}
                 {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -130,8 +130,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceCharge} грн</td>
               )}
                 {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -148,8 +148,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceCharge} грн</td>
               )}
            {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -166,8 +166,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceCharge} грн</td>
               )}
                  {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -180,8 +180,8 @@ export function LcdItem({ gsm }) {
               </div>
               <td className="tableTitle">{glassCam} грн</td>
               {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -198,8 +198,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceCharge} грн</td>
               )}
    {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -219,8 +219,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceCharge} грн</td>
               )}
                 {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -237,8 +237,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceCharge} грн</td>
               )}
                {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         }
@@ -255,8 +255,8 @@ export function LcdItem({ gsm }) {
                 <td className="tableTitle">{priceCharge} грн</td>
               )}
                {available ? (
-                   <td className="tableTitle available">В наявності</td>
-              ) : (<td className="tableTitle unavailable">Уточнення</td>)}
+                   <td className="tableTitle available">На складі</td>
+              ) : (<td className="tableTitle unavailable">Запит</td>)}
             </tr>
           );
         } else {

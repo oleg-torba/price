@@ -344,7 +344,7 @@ li {
 
 .section {
   color: black;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   padding: 15px 15px;
   margin-left: auto;
@@ -354,6 +354,7 @@ li {
 
 .title {
   text-align: center;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -550,6 +551,7 @@ a {
 
 .footer {
   text-align: center;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
