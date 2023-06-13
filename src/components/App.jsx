@@ -16,7 +16,7 @@ export function App() {
   const [gsm, setGsm] = useState([]);
   const [parts, setParts] = useState([]);
   const [filter, setFilter] = useState([]);
-  gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
+  gsm.sort((a, b) => (a.available < b.available ? 1 : -1));
   parts.sort((a, b) => (a.name < b.name ? 1 : -1));
   const data = Data.shop.items.item;
   const partList = Parts.yml_catalog.shop.offers.offer;
