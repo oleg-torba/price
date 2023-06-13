@@ -115,8 +115,8 @@ export function LcdItem({ gsm }) {
           );
         }
         if (
-          item.name.includes('Задня частина') ||
-          item.name.includes('Кришка задня')
+          item.name.toLowerCase().includes('задня частина') ||
+          item.name.toLowerCase().includes('кришка задня')
         ) {
           return (
             <tr key={item.vendorCode}>

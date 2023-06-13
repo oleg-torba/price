@@ -16,7 +16,7 @@ export function App() {
   const [gsm, setGsm] = useState([]);
   const [parts, setParts] = useState([]);
   const [filter, setFilter] = useState([]);
-  gsm.sort((a, b) => (a.price < b.price ? 1 : -1));
+  gsm.sort((a, b) => (a.name > b.name ? 1 : -1));
   parts.sort((a, b) => (a.name < b.name ? 1 : -1));
   const data = Data.shop.items.item;
   const partList = Parts.yml_catalog.shop.offers.offer;
@@ -27,8 +27,11 @@ export function App() {
   const battery = gsm.filter(i => i.name.includes('Акумулятор'));
   const lcd = gsm.filter(i => i.name.includes('Дисплей'));
   const buzzer = gsm.filter(i => i.name.toLowerCase().includes('бузер'));
+  const backCoverIphone = gsm.filter(
+    i => i.name.includes('Кришка задня')
+  );
   const backCover = gsm.filter(
-    i => i.name.includes('Задня частина') || i.name.includes('Кришка')
+    i => i.name.includes('Задня частина')
   );
   const camera = gsm.filter(i => i.name.includes('Камера'));
   const charge = gsm.filter(i => i.name.includes("Роз'єм"));
@@ -146,11 +149,22 @@ export function App() {
                       </li>
                     )}
 
-                    {backCover.length > 0 && (
+                    {backCoverIphone.length > 0 && (
                       <li>
                         <button
                           className="formBtn"
-                          name="Задня"
+                          name="Кришка задня"
+                          onClick={filterChange}
+                        >
+                          Задні кришки iPhone: ({backCoverIphone.length})
+                        </button>
+                      </li>
+                    )}
+                     {backCover.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Задня частина"
                           onClick={filterChange}
                         >
                           Задні кришки: ({backCover.length})
@@ -332,11 +346,22 @@ export function App() {
                       </li>
                     )}
 
+                    {backCoverIphone.length > 0 && (
+                      <li>
+                        <button
+                          className="formBtn"
+                          name="Кришка задня"
+                          onClick={filterChange}
+                        >
+                          Задні кришки iPhone: ({backCoverIphone.length})
+                        </button>
+                      </li>
+                    )}
                     {backCover.length > 0 && (
                       <li>
                         <button
                           className="formBtn"
-                          name="Задня"
+                          name="Задня частина"
                           onClick={filterChange}
                         >
                           Задні кришки: ({backCover.length})
