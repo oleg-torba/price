@@ -9,7 +9,7 @@ export function LcdItem({ gsm }) {
         <th className="tableTitle">Наявність</th>
       </tr>
       {gsm.map(item => {
-        let priceLCD = Math.ceil(((item.price + 22) * 39) / 50) * 50;
+        let priceLCD = Math.ceil(((item.price + 19) * 39) / 50) * 50;
         let priceCharge = Math.ceil(((item.price + 11) * 39) / 50) * 50;
         let glassCam = Math.ceil(((item.price + 11) * 39) / 50) * 50;
         // let promoPrice = Math.ceil(((item.price + 17) * 39) / 50) * 50;
