@@ -20,8 +20,8 @@ export function Promo ({promoParts}) {
          </div>
         <ul className="promoItem">
             {promo.map(item => {
-                const currentPrice = Math.ceil(((item.price + 22) * 39) / 50) * 50;
-                const promoPrice = Math.ceil(((item.price + 19) * 39) / 50) * 50;
+                const currentPrice = Math.ceil(((item.price + 19) * 39) / 50) * 50;
+                const promoPrice = Math.ceil(((item.price + 16) * 39) / 50) * 50;
                 return (
                     <li className="contactsItem" key={item.vendorCode}>
                         <div className="contact">
