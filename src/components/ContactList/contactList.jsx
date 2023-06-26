@@ -34,7 +34,7 @@ export function LcdItem({ gsm }) {
           item.name.includes('iPhone 13');
 
         if (item.price >= 25) {
-          priceLCD = Math.ceil(((item.price + 23) * 39) / 50) * 50;
+          priceLCD = Math.ceil(((item.price + 22) * 39) / 50) * 50;
         }
         if (item.price >= 90) {
           // eslint-disable-next-line no-unused-vars
