@@ -94,7 +94,6 @@ export function App() {
               homeClick={onHomeClick}
             />
           </Section>
-
           <Section>
             <Form onSubmit={formSubmit} />
           </Section>
