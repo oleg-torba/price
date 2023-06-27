@@ -46,7 +46,6 @@ export function App() {
     if (searchQuery === '') {
       return;
     }
-    fetch('https://gsm-forsage.com.ua/dealerPartImagesPromUSD.xml').then(res=> console.log(res))
     setGsm(
       data.filter(data =>
         data.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -94,6 +93,7 @@ export function App() {
               homeClick={onHomeClick}
             />
           </Section>
+
           <Section>
             <Form onSubmit={formSubmit} />
           </Section>
