@@ -96,7 +96,7 @@ export function LcdItem({ gsm }) {
             </tr>
           );
         }
-        if (item.name.includes('Дисплей') || item.name.includes('Complete')) {
+        if (item.name.includes('Дисплей')) {
           return (
             <tr key={item.vendorCode}>
               <div className="tableItem">
