@@ -11,9 +11,9 @@ export function Header({ theme, onChangeTheme, homeClick }) {
           <a className='newsLink' href="https://gsminfo.com.ua/88837-amoled-chy-ips-yakyj-dysplej-dlya-smartfona-krashhyj.html">Корисне</a>
         </div>
         <div className='headerBlock'>
-        <a className="phone" href="tel:0981882858">
+        <a className="phone" href="tel:0686868599">
           <BsTelephone />
-          {'  '}0981882858
+          {'  '}0686868599
         </a>
         <div class="theme">
           <div class="switch">
