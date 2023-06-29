@@ -13,7 +13,7 @@ export function Header({ theme, onChangeTheme, homeClick }) {
         <div className='headerBlock'>
         <a className="phone" href="tel:0686868599">
           <BsTelephone />
-          {'  '}0686868599
+          {'  '}0999999999
         </a>
         <div class="theme">
           <div class="switch">
